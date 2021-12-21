@@ -18,11 +18,13 @@ Works with [OSM2SHP](https://github.com/dkxce/OSM2SHP) data
 - Support: Restrictions: Tunnel, Bridge, Ferry, Toll, Customs, Tow, Railway and other   
 - Support: TCP and HTTP (REST) protocol    
 - Support: Road Traffic (JAMs) as external service    
-- HTTP Web: API, Status and test map    
+- HTTP Web: API, Status and test map  
+- Web API: REST, SOAP, XML-RPC    
 - nmsRoutesDirectCall.dll for C# and ActiveX   
 - Testing applications   
 - Converter from shapes   
 - Route Engine as Service   
+- Any graph data (not only roads)   
 
 - Поддерживает источники данных в виде shape фалов и dbf файлов    
 - Поддерживает: GARMIN shape файлы   
@@ -38,7 +40,9 @@ Works with [OSM2SHP](https://github.com/dkxce/OSM2SHP) data
 - Поддерживает: TCP и HTTP (REST) подключения   
 - Поддерживает: Трафик (пробки) как внешний подключаемый сервис   
 - Веб сервер: API, статус и тестовая карта   
+- Веб API: REST, SOAP, XML-RPC    
 - nmsRoutesDirectCall.dll для C# и ActiveX   
 - Приложения для тестирования   
 - Конвертер из shape файлов
 - Маршрутный движок как сервис   
+- Любой граф данных (не только дороги)   
