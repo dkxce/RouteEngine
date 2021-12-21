@@ -5,7 +5,7 @@ dkxce.Route.Engine with TCP and HTTP support for Road Maps by Garmin or OSM sour
 Works with [OSM2SHP](https://github.com/dkxce/OSM2SHP) data    
 Работает с данными, полученными с [OSM2SHP](https://github.com/dkxce/OSM2SHP)    
 
---
+<img src="route_sample_007.png"/>    
 
 - Source Data: Shapes (in WGS-84) and DBF files   
 - Support: Gamin Shapes (in WGS-84) Format   
@@ -59,5 +59,4 @@ Works with [OSM2SHP](https://github.com/dkxce/OSM2SHP) data
 <img src="route_sample_004.png"/>    
 <img src="route_sample_005.png"/>    
 <img src="route_sample_006.png"/>    
-<img src="route_sample_007.png"/>    
 <img src="route_sample_008.png"/>    
