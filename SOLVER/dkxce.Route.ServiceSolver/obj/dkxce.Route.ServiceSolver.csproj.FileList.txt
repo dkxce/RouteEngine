@@ -1,0 +1,17 @@
+bin\Debug\dkxce.Route.ServiceSolver.exe
+bin\Debug\dkxce.Route.ServiceSolver.pdb
+bin\Debug\dkxce.Route.Classes.dll
+bin\Debug\dkxce.Route.GSolver.dll
+bin\Debug\dkxce.Route.ISolver.dll
+bin\Debug\dkxce.Route.Matrix.dll
+bin\Debug\dkxce.Route.Regions.dll
+bin\Debug\dkxce.Route.WayList.dll
+bin\Debug\dkxce.Route.ISolver.pdb
+bin\Debug\dkxce.Route.Matrix.pdb
+bin\Debug\dkxce.Route.Regions.pdb
+bin\Debug\dkxce.Route.GSolver.pdb
+bin\Debug\dkxce.Route.WayList.pdb
+bin\Debug\dkxce.Route.Classes.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\dkxce.Route.ServiceSolver.exe
+obj\Debug\dkxce.Route.ServiceSolver.pdb

@@ -1,0 +1,13 @@
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.ServiceSolver.Lipetsk.exe
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.ServiceSolver.Lipetsk.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.Classes.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.ISolver.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.ISolver.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.Classes.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.GSolver.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\obj\Debug\dkxce.Route.ServiceSolver.Lipetsk.exe
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\obj\Debug\dkxce.Route.ServiceSolver.Lipetsk.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.WayList.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.WayList.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.ServiceSolver.Lipetsk\bin\Debug\dkxce.Route.GSolver.dll

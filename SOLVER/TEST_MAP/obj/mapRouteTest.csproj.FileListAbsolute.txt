@@ -1,0 +1,9 @@
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\ReadyBatch\mapRouteTest.exe
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\ReadyBatch\mapRouteTest.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\ResolveAssemblyReference.cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.DescrForm.resources
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.TestForm.resources
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\mapRouteTest.Properties.Resources.resources
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\mapRouteTest.csproj.GenerateResource.Cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\mapRouteTest.exe
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\mapRouteTest.pdb

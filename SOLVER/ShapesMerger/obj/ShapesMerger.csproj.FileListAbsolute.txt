@@ -1,0 +1,8 @@
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TOOLS\ShapesMerger.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TOOLS\ShapesMerger.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesMerger\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesMerger\obj\Debug\ShapesMerger.Properties.Resources.resources
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesMerger\obj\Debug\ShapesMerger.csproj.GenerateResource.Cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesMerger\obj\Debug\ShapesMerger.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesMerger\obj\Debug\ShapesMerger.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesMerger\obj\Debug\ShapesMerger.MergeForm.resources

@@ -1,0 +1,30 @@
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Matrix\bin\Debug\dkxce.Route.Matrix.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Matrix\bin\Debug\dkxce.Route.Matrix.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Matrix\bin\Debug\dkxce.Route.Matrix.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Matrix\bin\Debug\dkxce.Route.Matrix.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Matrix\bin\Debug\dkxce.Route.Matrix.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Matrix\bin\Debug\dkxce.Route.Matrix.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\ResolveAssemblyReference.cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\READY\MapCreator\dkxce.Route.Matrix.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\READY\MapCreator\dkxce.Route.Matrix.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Matrix\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\MAIN_DLLs\dkxce.Route.Matrix.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\MAIN_DLLs\dkxce.Route.Matrix.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Matrix\obj\Release\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Matrix\obj\Release\dkxce.Route.Matrix.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Matrix\obj\Release\dkxce.Route.Matrix.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\MAIN_DLLs\dkxce.Route.Matrix.dll
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\MAIN_DLLs\dkxce.Route.Matrix.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.Matrix\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.dll
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.Matrix\obj\Debug\dkxce.Route.Matrix.pdb

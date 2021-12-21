@@ -1,0 +1,7 @@
+bin\Debug\dkxce.Route.Shp2Rt.dll
+bin\Debug\dkxce.Route.Shp2Rt.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\dkxce.Route.Shp2Rt.dll
+obj\Debug\dkxce.Route.Shp2Rt.pdb
+bin\Debug\dkxce.Route.Classes.dll
+bin\Debug\dkxce.Route.Classes.pdb

@@ -1,0 +1,11 @@
+bin\Debug\dkxce.Route.ISolver.dll
+bin\Debug\dkxce.Route.ISolver.pdb
+bin\Debug\dkxce.Route.Classes.dll
+bin\Debug\dkxce.Route.GSolver.dll
+bin\Debug\dkxce.Route.GSolver.pdb
+bin\Debug\dkxce.Route.WayList.pdb
+bin\Debug\dkxce.Route.Classes.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\dkxce.Route.ISolver.dll
+obj\Debug\dkxce.Route.ISolver.pdb
+bin\Debug\dkxce.Route.WayList.dll

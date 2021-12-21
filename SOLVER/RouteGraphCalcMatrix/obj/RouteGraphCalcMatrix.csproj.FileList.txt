@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+..\ReadyBatch\RouteGraphCalcMatrix.exe
+..\ReadyBatch\RouteGraphCalcMatrix.pdb
+obj\Debug\RouteGraphCalcMatrix.exe
+obj\Debug\RouteGraphCalcMatrix.pdb

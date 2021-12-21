@@ -1,0 +1,15 @@
+bin\Debug\TEST_MAP.exe
+bin\Debug\TEST_MAP.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TEST_MAP.Form1.resources
+obj\Debug\TEST_MAP.Properties.Resources.resources
+obj\Debug\TEST_MAP.csproj.GenerateResource.Cache
+obj\Debug\TEST_MAP.exe
+obj\Debug\TEST_MAP.pdb
+bin\Debug\dkxce.Route.Classes.dll
+bin\Debug\dkxce.Route.ISolver.dll
+bin\Debug\dkxce.Route.ISolver.pdb
+bin\Debug\dkxce.Route.Classes.pdb
+..\ReadyBatch\TEST_MAP.exe
+..\ReadyBatch\TEST_MAP.pdb
+obj\Debug\TEST_MAP.DescrForm.resources

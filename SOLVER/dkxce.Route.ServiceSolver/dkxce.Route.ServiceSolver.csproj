@@ -1,0 +1,125 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7B3FF98-D586-472C-9EC3-BA5CFA15FDEB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dkxce.Route.ServiceSolver</RootNamespace>
+    <AssemblyName>dkxce.Route.ServiceSolver</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <ApplicationIcon>solver.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\READY\Service\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\READY\Service\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dkxce.Route.Classes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\READY\MAIN_DLLs\dkxce.Route.Classes.dll</HintPath>
+    </Reference>
+    <Reference Include="dkxce.Route.GSolver, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\READY\MAIN_DLLs\dkxce.Route.GSolver.dll</HintPath>
+    </Reference>
+    <Reference Include="dkxce.Route.ISolver, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\READY\MAIN_DLLs\dkxce.Route.ISolver.dll</HintPath>
+    </Reference>
+    <Reference Include="dkxce.Route.Matrix, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\READY\MAIN_DLLs\dkxce.Route.Matrix.dll</HintPath>
+    </Reference>
+    <Reference Include="dkxce.Route.Regions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\READY\MAIN_DLLs\dkxce.Route.Regions.dll</HintPath>
+    </Reference>
+    <Reference Include="dkxce.Route.WayList, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\READY\MAIN_DLLs\dkxce.Route.WayList.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\READY\3RD_PARTY_DLLs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XMLSaved, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\READY\MAIN_DLLs\XMLSaved.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dkxce.Route.ServiceSolver.OneRegion.cs" />
+    <Compile Include="dkxce.Route.ServiceSolver.Russia.cs" />
+    <Compile Include="Program.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientRequest.cs" />
+    <Compile Include="dkxce.Route.ServiceSolver.RouteThreader.cs" />
+    <Compile Include="RouteServer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SOAPInterface.cs" />
+    <Compile Include="SOAPWSDL.cs" />
+    <Compile Include="SYSID.cs" />
+    <Compile Include="XmlRpc\Logger.cs" />
+    <Compile Include="XmlRpc\SimpleHttpRequest.cs" />
+    <Compile Include="XmlRpc\XmlRpcBoxcarRequest.cs" />
+    <Compile Include="XmlRpc\XmlRpcClientProxy.cs" />
+    <Compile Include="XmlRpc\XmlRpcDeserializer.cs" />
+    <Compile Include="XmlRpc\XmlRpcErrorCodes.cs" />
+    <Compile Include="XmlRpc\XmlRpcException.cs" />
+    <Compile Include="XmlRpc\XmlRpcExposedAttribute.cs" />
+    <Compile Include="XmlRpc\XmlRpcRequest.cs" />
+    <Compile Include="XmlRpc\XmlRpcRequestDeserializer.cs" />
+    <Compile Include="XmlRpc\XmlRpcRequestSerializer.cs" />
+    <Compile Include="XmlRpc\XmlRpcResponder.cs" />
+    <Compile Include="XmlRpc\XmlRpcResponse.cs" />
+    <Compile Include="XmlRpc\XmlRpcResponseDeserializer.cs" />
+    <Compile Include="XmlRpc\XmlRpcResponseSerializer.cs" />
+    <Compile Include="XmlRpc\XmlRpcSerializer.cs" />
+    <Compile Include="XmlRpc\XmlRpcServer.cs" />
+    <Compile Include="XmlRpc\XmlRpcSystemObject.cs" />
+    <Compile Include="XmlRpc\XmlRpcXmlTokens.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="solver.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

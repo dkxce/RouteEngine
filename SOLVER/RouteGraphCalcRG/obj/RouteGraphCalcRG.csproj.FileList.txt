@@ -1,0 +1,13 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\RouteGraphCalcRG.exe
+bin\Debug\RouteGraphCalcRG.pdb
+bin\Debug\dkxce.Route.Classes.dll
+bin\Debug\dkxce.Route.GSolver.dll
+bin\Debug\dkxce.Route.Shp2Rt.dll
+bin\Debug\dkxce.Route.GSolver.pdb
+bin\Debug\dkxce.Route.Shp2Rt.pdb
+bin\Debug\dkxce.Route.Classes.pdb
+obj\Debug\RouteGraphCalcRG.exe
+obj\Debug\RouteGraphCalcRG.pdb
+..\ReadyBatch\RouteGraphCalcRG.exe
+..\ReadyBatch\RouteGraphCalcRG.pdb

@@ -1,0 +1,16 @@
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\TOOLS\SSProtector.exe
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\TOOLS\SSProtector.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\nmsRouteLicenseFileTool\obj\Release\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\nmsRouteLicenseFileTool\obj\Release\SSProtector.exe
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\nmsRouteLicenseFileTool\obj\Release\SSProtector.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\SSProtector\obj\Release\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\SSProtector\obj\Release\SSProtector.exe
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\SSProtector\obj\Release\SSProtector.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\SSProtector\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\SSProtector\obj\Debug\SSProtector.exe
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\SSProtector\obj\Debug\SSProtector.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TOOLS\SSProtector.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TOOLS\SSProtector.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\SSProtector\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\SSProtector\obj\Debug\SSProtector.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\SSProtector\obj\Debug\SSProtector.pdb

@@ -1,0 +1,8 @@
+C:\Downloads\CD-REC\TEST\injproc\injlib\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Downloads\CD-REC\TEST\injproc\Debug\injlib.dll
+C:\Downloads\CD-REC\TEST\injproc\Debug\injlib.pdb
+C:\Downloads\CD-REC\TEST\injproc\injlib\obj\x86\Debug\injlib.dll
+C:\Downloads\CD-REC\TEST\injproc\injlib\obj\x86\Debug\injlib.pdb
+C:\Downloads\CD-REC\TEST\injprocX\injlib\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Downloads\CD-REC\TEST\injprocX\injlib\obj\x86\Debug\injlib.dll
+C:\Downloads\CD-REC\TEST\injprocX\injlib\obj\x86\Debug\injlib.pdb

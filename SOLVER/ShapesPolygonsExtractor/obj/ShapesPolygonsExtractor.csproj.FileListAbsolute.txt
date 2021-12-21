@@ -1,0 +1,5 @@
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TOOLS\ShapesPolygonsExtractor.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TOOLS\ShapesPolygonsExtractor.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesPolygonsExtractor\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesPolygonsExtractor\obj\Debug\ShapesPolygonsExtractor.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesPolygonsExtractor\obj\Debug\ShapesPolygonsExtractor.pdb

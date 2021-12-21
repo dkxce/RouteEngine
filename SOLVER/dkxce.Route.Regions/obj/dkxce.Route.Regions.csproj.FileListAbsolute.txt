@@ -1,0 +1,36 @@
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Regions.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Regions.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Classes.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Classes.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Regions.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Regions.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Classes.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Classes.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\ResolveAssemblyReference.cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Regions.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Regions.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Classes.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Regions\bin\Debug\dkxce.Route.Classes.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\READY\MapCreator\dkxce.Route.Regions.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\READY\MapCreator\dkxce.Route.Regions.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Regions\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\MAIN_DLLs\dkxce.Route.Regions.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\MAIN_DLLs\dkxce.Route.Regions.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Regions\obj\Release\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Regions\obj\Release\dkxce.Route.Regions.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.Regions\obj\Release\dkxce.Route.Regions.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\MAIN_DLLs\dkxce.Route.Regions.dll
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\MAIN_DLLs\dkxce.Route.Regions.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.Regions\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.dll
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.Regions\obj\Debug\dkxce.Route.Regions.pdb

@@ -1,0 +1,8 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>999 "M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\_SHAPES_\WATER\X3[L0001].shp" "M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\MapCreator\..\GRAPHS\999.rt"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>710 "M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\_SHAPES_\LIPETSK_OSM2SHP\LIPETSK[L0001].shp" "M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\MapCreator\..\GRAPHS\710.rt" attr</StartArguments>
+  </PropertyGroup>
+</Project>

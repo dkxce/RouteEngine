@@ -1,0 +1,7 @@
+C:\Downloads\CD-REC\TEST\_CPP_\PROJECT_001\csharplib\bin\Debug\csharplib.dll
+C:\Downloads\CD-REC\TEST\_CPP_\PROJECT_001\csharplib\bin\Debug\csharplib.pdb
+C:\Downloads\CD-REC\TEST\_CPP_\PROJECT_001\csharplib\obj\Debug\ResolveAssemblyReference.cache
+C:\Downloads\CD-REC\TEST\_CPP_\PROJECT_001\csharplib\obj\Debug\csharplib.dll
+C:\Downloads\CD-REC\TEST\_CPP_\PROJECT_001\csharplib\obj\Debug\csharplib.pdb
+C:\Downloads\CD-REC\TEST\_CPP_\PROJECT_001\Debug\csharplib.dll
+C:\Downloads\CD-REC\TEST\_CPP_\PROJECT_001\Debug\csharplib.pdb

@@ -1,0 +1,5 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>"/path=..\Regions" "/f={REGION_ID:R000} - {NAME} - $FILE$ - $INDEX$" /km=15</StartArguments>
+  </PropertyGroup>
+</Project>

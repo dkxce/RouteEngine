@@ -1,0 +1,26 @@
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.exe
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\TEST_MAP\bin\Debug\TEST_MAP.exe
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\TEST_MAP\bin\Debug\TEST_MAP.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.Form1.resources
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.Properties.Resources.resources
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.csproj.GenerateResource.Cache
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\ReadyBatch\TEST_MAP.exe
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\ReadyBatch\TEST_MAP.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.DescrForm.resources
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.Form1.resources
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.Properties.Resources.resources
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.csproj.GenerateResource.Cache
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.exe
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\ResolveAssemblyReference.cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.DescrForm.resources
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.csproj.GenerateResource.Cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\TEST_MAP.TestForm.resources
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\ReadyBatch\MAP_TEST.exe
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\ReadyBatch\MAP_TEST.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\MAP_TEST.Properties.Resources.resources
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\MAP_TEST.exe
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\TEST_MAP\obj\Debug\MAP_TEST.pdb

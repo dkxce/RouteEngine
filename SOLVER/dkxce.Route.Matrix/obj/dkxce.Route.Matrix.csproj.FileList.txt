@@ -1,0 +1,5 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\dkxce.Route.Matrix.dll
+bin\Debug\dkxce.Route.Matrix.pdb
+obj\Debug\dkxce.Route.Matrix.dll
+obj\Debug\dkxce.Route.Matrix.pdb

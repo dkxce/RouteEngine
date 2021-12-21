@@ -1,0 +1,8 @@
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesBBox2Regions\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesBBox2Regions\obj\Debug\ShapesBBox2Regions.Properties.Resources.resources
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesBBox2Regions\obj\Debug\ShapesBBox2Regions.SBB2RForm.resources
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesBBox2Regions\obj\Debug\ShapesBBox2Regions.csproj.GenerateResource.Cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TOOLS\ShapesBBox2Regions.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TOOLS\ShapesBBox2Regions.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesBBox2Regions\obj\Debug\ShapesBBox2Regions.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\ShapesBBox2Regions\obj\Debug\ShapesBBox2Regions.pdb

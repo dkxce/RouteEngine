@@ -1,0 +1,5 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>nmsRoutesWebTest.exe 87A930E02E584DEAB087239008C5D943 "http://192.168.0.18/nms/snearroad.ashx?k={k}&amp;f=xml&amp;x={x}&amp;y={y}&amp;n=0" 8 msk</StartArguments>
+  </PropertyGroup>
+</Project>

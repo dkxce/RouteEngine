@@ -1,0 +1,42 @@
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.WayList.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.WayList.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.Classes.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.GSolver.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.Classes.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.GSolver.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.WayList.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.WayList.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.Classes.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.GSolver.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.GSolver.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.Classes.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\ResolveAssemblyReference.cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.WayList.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.WayList.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.Classes.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.GSolver.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.GSolver.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\bin\Debug\dkxce.Route.Classes.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\READY\MapCreator\dkxce.Route.WayList.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\READY\MapCreator\dkxce.Route.WayList.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.WayList\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\MAIN_DLLs\dkxce.Route.WayList.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\MAIN_DLLs\dkxce.Route.WayList.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.WayList\obj\Release\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.WayList\obj\Release\dkxce.Route.WayList.dll
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\dkxce.Route.WayList\obj\Release\dkxce.Route.WayList.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\MAIN_DLLs\dkxce.Route.WayList.dll
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\MAIN_DLLs\dkxce.Route.WayList.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.WayList\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.dll
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.WayList\obj\Debug\dkxce.Route.WayList.pdb

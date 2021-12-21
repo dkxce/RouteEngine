@@ -1,0 +1,85 @@
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\obj\Debug\RMXSolver.exe
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\obj\Debug\RMXSolver.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\RMXSolver.exe
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\RMXSolver.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Classes.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.GSolver.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Matrix.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.PointNLL.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Regions.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Shp2Rt.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.WayList.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.PointNLL.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Shp2Rt.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Matrix.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Regions.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.GSolver.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.WayList.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Classes.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ISolver.dll
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ISolver.pdb
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ServiceSolver.exe
+D:\Projects\projects.c# III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ServiceSolver.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\obj\Debug\RMXSolver.exe
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\obj\Debug\RMXSolver.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\RMXSolver.exe
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\RMXSolver.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Classes.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.GSolver.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ISolver.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Matrix.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.PointNLL.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Regions.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ServiceSolver.exe
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Shp2Rt.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.WayList.dll
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.PointNLL.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ISolver.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Shp2Rt.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Matrix.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Regions.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.GSolver.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.WayList.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Classes.pdb
+D:\Projects\projects.cs.III\_GRAPH_SOLUTION\RGSolver\obj\Debug\ResolveAssemblyReference.cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\obj\Debug\ResolveAssemblyReference.cache
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\RMXSolver.exe
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\RMXSolver.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Classes.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.GSolver.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ISolver.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Matrix.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.PointNLL.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Regions.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ServiceSolver.exe
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Shp2Rt.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.WayList.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.PointNLL.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ISolver.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Shp2Rt.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Matrix.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Regions.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.GSolver.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.WayList.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.Classes.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\obj\Debug\RMXSolver.exe
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\obj\Debug\RMXSolver.pdb
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ServiceSolver.xml
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\Newtonsoft.Json.dll
+C:\PROJECTS\CSharp_Navicom\ADDR_SEARCH\_GRAPH_SOLUTION\RGSolver\bin\Debug\dkxce.Route.ServiceSolver.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\READY\MapCreator\RMXSolver.exe
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\READY\MapCreator\RMXSolver.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\RGSolver\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\RGSolver\obj\Debug\RMXSolver.exe
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\RGSolver\obj\Debug\RMXSolver.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\TEST\RMXSolver.exe
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\READY\TEST\RMXSolver.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\RGSolver\obj\Release\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\RGSolver\obj\Release\RMXSolver.exe
+M:\NAVICOM_PROJECTS\_ROUTES_GIT_\SOLVER\RGSolver\obj\Release\RMXSolver.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TEST\RMXSolver.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\TEST\RMXSolver.pdb
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\RGSolver\obj\Debug\ResolveAssemblyReference.cache
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\RGSolver\obj\Debug\RMXSolver.exe
+M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\RGSolver\obj\Debug\RMXSolver.pdb
