@@ -5,6 +5,8 @@ dkxce.Route.Engine with TCP and HTTP support for Road Maps by Garmin or OSM sour
 Works with [OSM2SHP](https://github.com/dkxce/OSM2SHP) data    
 Работает с данными, полученными с [OSM2SHP](https://github.com/dkxce/OSM2SHP)    
 
+--
+
 - Source Data: Shapes (in WGS-84) and DBF files   
 - Support: Gamin Shapes (in WGS-84) Format   
 - Support: OSM Shapes (in WGS-84) Format from [OSM2SHP Converter](https://github.com/dkxce/OSM2SHP)   
@@ -26,6 +28,8 @@ Works with [OSM2SHP](https://github.com/dkxce/OSM2SHP) data
 - Route Engine as Service   
 - Any graph data (not only roads)   
 
+--
+
 - Поддерживает источники данных в виде shape фалов и dbf файлов    
 - Поддерживает: GARMIN shape файлы   
 - Поддерживает: OSM shape файлы из [OSM2SHP Converter](https://github.com/dkxce/OSM2SHP)    
@@ -46,3 +50,14 @@ Works with [OSM2SHP](https://github.com/dkxce/OSM2SHP) data
 - Конвертер из shape файлов
 - Маршрутный движок как сервис   
 - Любой граф данных (не только дороги)   
+
+--
+
+<img src="route_sample_001.png"/>    
+<img src="route_sample_002.png"/>    
+<img src="route_sample_003.png"/>    
+<img src="route_sample_004.png"/>    
+<img src="route_sample_005.png"/>    
+<img src="route_sample_006.png"/>    
+<img src="route_sample_007.png"/>    
+<img src="route_sample_008.png"/>    
