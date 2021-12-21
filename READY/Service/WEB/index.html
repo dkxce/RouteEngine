@@ -1,0 +1,38 @@
+﻿<html><head>
+	<script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+	<style>
+		input
+		{
+			border:solid 1px silver;
+			width:50px;
+			border-top:none;
+			border-left:none;
+		}
+	</style>
+	</head><body>
+	<li>
+		<a href="/nms/web/example1.html" target="_blank">Маршруты 1</a> (Тест) - 
+		  <a href="/nms/web/example1.html#{lat:52.586186,lon:39.60533,zoom:12}" target="_blank">Липецк</a> |
+		  <a href="/nms/web/example1.html#{lat:7.89059,lon:98.3981,zoom:12}" target="_blank">Пхукет</a> |
+		  <a href="/nms/web/example1.html#{lat:41.69411,lon:44.83368,zoom:12}" target="_blank">Тбилиси</a> |
+		  <a href="/nms/web/example1.html#{lat:44.58883,lon:33.5224,zoom:13}" target="_blank">Севастополь</a> --
+		  <a id="custom1" href="#" onclick="fCustom(1);" target="_blank">Custom</a> Lat:<input id="clat1" value="52.58"/> Lon:<input id="clon1" value="39.60"/>
+	</li>
+	<li>
+		<a href="/nms/web/example2.html" target="_blank">Маршруты 2</a> (Подсветка скорости) - 
+		<a href="/nms/web/example2.html#{lat:52.586186,lon:39.60533,zoom:12}" target="_blank">Липецк</a> |
+		<a href="/nms/web/example2.html#{lat:7.89059,lon:98.3981,zoom:12}" target="_blank">Пхукет</a> | 
+		<a href="/nms/web/example2.html#{lat:41.69411,lon:44.83368,zoom:12}" target="_blank">Тбилиси</a> |
+		<a href="/nms/web/example2.html#{lat:44.58883,lon:33.5224,zoom:13}" target="_blank">Севастополь</a> -- 
+		<a id="custom2" href="#" onclick="fCustom(2);" target="_blank">Custom</a> Lat:<input id="clat2" value="52.58"/> Lon:<input id="clon2" value="39.60"/>
+	</li>
+	<div id="dialog"></div>	
+	<script>
+		var fCustom = function(id)
+		{			
+			var lat = document.getElementById('clat'+id).value;
+			var lon = document.getElementById('clon'+id).value;			
+			document.getElementById('custom'+id).href = '/nms/web/example'+id+'.html#{lat:'+lat+',lon:'+lon+',zoom:14}';
+		};
+	</script>
+</body></html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file was created by NSISDialogDesigner 1.4.2.0
+http://coolsoft.altervista.org/nsisdialogdesigner
+Do not edit manually!
+-->
+<Dialog Name="xForms_Ports" Title="Настройки ПО..." Subtitle="Сетевая конфигурация...">
+  <TextBox Name="pFile" Location="118, 156" Size="282, 20" TabIndex="0" />
+  <Label Name="Label5" Location="28, 159" Size="171, 19" Text="Файл графа:" TabIndex="1" />
+  <DropList Name="pMap" Location="300, 66" Size="100, 21" TabIndex="2" SelectedItem="one">
+    <Items>
+      <value>one</value>
+      <value>multiple</value>
+    </Items>
+  </DropList>
+  <Label Name="Label4" Location="28, 66" Size="171, 19" Text="Режим карты:" TabIndex="3" />
+  <Label Name="Label3" Location="28, 39" Size="171, 19" Text="Протокол взаимодействия:" TabIndex="4" />
+  <DropList Name="pMode" Location="300, 39" Size="100, 21" TabIndex="5" SelectedItem="dual(tcp+http)">
+    <Items>
+      <value>tcp</value>
+      <value>remoting</value>
+      <value>http</value>
+      <value>dual(tcp+http)</value>
+    </Items>
+  </DropList>
+  <Number Name="pHTTP" Location="300, 124" Text="8080" MaxLength="5" TabIndex="6" />
+  <Number Name="pTCP" Location="300, 98" Text="7755" MaxLength="5" TabIndex="7" />
+  <Label Name="Label2" Location="28, 128" Size="114, 19" Text="HTTP порт сервера:" TabIndex="8" />
+  <Label Name="Label1" Location="28, 101" Size="114, 19" Text="TCP порт сервера:" TabIndex="9" />
+</Dialog>

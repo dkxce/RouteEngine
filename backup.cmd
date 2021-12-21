@@ -1,0 +1,16 @@
+del backup.rar
+set RAR="C:\Program Files\WinRAR\winrar.exe"
+%RAR% a backup.rar @backup.txt
+%RAR% a backup.rar "READY\_SHAPES_\WATER"
+%RAR% a backup.rar "ICONS"
+%RAR% a backup.rar "INSTRESOURCES"
+%RAR% a backup.rar "SOLVER"
+%RAR% a backup.rar "READY\3RD_PARTY_DLLs"
+%RAR% a backup.rar "READY\DBF_TOOLS"
+%RAR% a backup.rar "READY\JamsCFG"
+%RAR% a backup.rar "READY\MAIN_DLLs"
+%RAR% a backup.rar "READY\MapCreator"
+%RAR% a backup.rar "READY\Regions"
+%RAR% a backup.rar "READY\Service"
+%RAR% a backup.rar "READY\TEST"
+%RAR% a backup.rar "READY\TOOLS"

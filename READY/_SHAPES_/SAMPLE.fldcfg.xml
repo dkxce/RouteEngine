@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShapeFields version="20160331L">
+  <CodePageId>1251</CodePageId>
+  <LinkId>LINK_ID</LinkId>
+  <GarminType>GRMN_TYPE</GarminType>  
+  <RouteSpeed>ROUTE_SPEED</RouteSpeed>
+  <SpeedLimit>SPD_LIMIT</SpeedLimit>
+  <OneWay>ONE_WAY</OneWay>
+  <TurnRestrictions>TURN_RSTRS</TurnRestrictions>
+  <!--Length>ST_LENGTH_ </Length-->
+  <Length>SHAPE_LENG</Length>  
+  <TMC>TMC_CODES1</TMC>
+  <RGNODE>RGNODE</RGNODE>
+  <NAME>STRT_ADDR</NAME>  
+  <ACC_MASK>ACC_MASK</ACC_MASK>
+  <IS_TUNNEL>IS_TUNNEL</IS_TUNNEL>
+  <TOLL_ROAD>TOLL_ROAD</TOLL_ROAD>
+  <ATTR>ATTR</ATTR>
+  <MaxWeight>ML</MaxWeight>
+  <MaxAxle>AL</MaxAxle>
+  <MaxHeight>HL</MaxHeight>
+  <MaxWidth>WL</MaxWidth>
+  <MaxLength>LL</MaxLength>  
+  <MinDistance>DL</MinDistance>
+</ShapeFields>

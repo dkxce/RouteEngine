@@ -1,0 +1,1 @@
+RGWay2RTE.exe mp ..\RGWays\*B10.rgway.xml

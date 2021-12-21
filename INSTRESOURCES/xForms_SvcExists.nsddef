@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file was created by NSISDialogDesigner 1.4.2.0
+http://coolsoft.altervista.org/nsisdialogdesigner
+Do not edit manually!
+-->
+<Dialog Name="xForms_SvcExists" Title="Dialog title..." Subtitle="Dialog subtitle...">
+  <Label Name="Label3" Location="48, 107" Size="351, 69" Text="Переустановка программы может удаление существующих настроек. Перед продолжением установки рекомендуется сохранить все настройки и по возможность сделать полный бэкап данных приложения.&#xD;&#xA;" TabIndex="0" />
+  <Label Name="Label2" Location="235, 69" Size="164, 21" Text="dkxce.Route.ServiceSolver" Font="Microsoft Sans Serif, 8.25pt, style=Bold" TabIndex="1" />
+  <Label Name="Label1" Location="48, 48" Size="351, 21" Text="На данном компьютере уже существует служба&#xD;&#xA;" TabIndex="2" />
+</Dialog>

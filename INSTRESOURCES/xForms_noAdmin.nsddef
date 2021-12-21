@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file was created by NSISDialogDesigner 1.4.2.0
+http://coolsoft.altervista.org/nsisdialogdesigner
+Do not edit manually!
+-->
+<Dialog Name="noAdmin" Title="Ограничения" Subtitle="Внимание...">
+  <Label Name="Label1" Location="12, 54" Size="426, 130" Text="Чтобы работать с установщиком вы должны иметь права локального администратора. Выполните вход в систему из-под администратора или запустите установку с правами администратора. &#xD;&#xA;&#xD;&#xA;Если вы проигнорируете данное предупреждение, необходимые службы не будут установлены!" Font="Microsoft Sans Serif, 8.25pt, style=Bold" ForeColor="Red" TabIndex="0" />
+</Dialog>

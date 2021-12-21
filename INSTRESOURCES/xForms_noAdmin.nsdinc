@@ -1,0 +1,40 @@
+; handle variables
+Var hCtl_noAdmin
+Var hCtl_noAdmin_Label1
+Var hCtl_noAdmin_Font1
+
+
+; dialog create function
+Function fnc_noAdmin_Create
+  
+  ; custom font definitions
+  CreateFont $hCtl_noAdmin_Font1 "Microsoft Sans Serif" "8.25" "700"
+  
+  ; === noAdmin (type: Dialog) ===
+  nsDialogs::Create 1018
+  Pop $hCtl_noAdmin
+  ${If} $hCtl_noAdmin == error
+    Abort
+  ${EndIf}
+  !insertmacro MUI_HEADER_TEXT "Ограничения" "Внимание, дальнейшая корректная установка невозможна"
+  
+  ; === Label1 (type: Label) ===
+  ${NSD_CreateLabel} 7.9u 33.23u 280.41u 80u "Чтобы работать с установщиком вы должны иметь права локального администратора. Выполните вход в систему из-под администратора или запустите установку с правами администратора. $\r$\n$\r$\nЕсли вы проигнорируете данное предупреждение, необходимые службы не будут установлены!"
+  Pop $hCtl_noAdmin_Label1
+  SendMessage $hCtl_noAdmin_Label1 ${WM_SETFONT} $hCtl_noAdmin_Font1 0
+  SetCtlColors $hCtl_noAdmin_Label1 0xFF0000 0xD4D0C8
+  
+FunctionEnd
+
+; dialog show function
+Function fnc_noAdmin_Show
+    ;Check Admin
+	UserInfo::getAccountType   
+    Pop $0
+    StrCmp $0 "Admin" +3
+ 
+    # if there is not a match, show dialog
+    Call fnc_noAdmin_Create
+    nsDialogs::Show    
+FunctionEnd
+

@@ -1,0 +1,369 @@
+﻿<html><head><title>Route API</title>
+<meta http-equiv="Content-Type" content="text/html;utf8">
+<script type="text/javascript" src="web/jquery-2.2.3.min.js"></script>		
+<style>
+	body {margin:0px;}
+	textarea {background:#FFCCCC;height:16px;}
+	.hr {height:2px;background:#4477FF;margin:5px 0px 0px 0px;}
+	.hd {background:#6688CC;padding:10px;}
+	.h0 {font-size:32px;font-weight:bold;margin:0px 0px 0px 20px;}
+	.h1 {font-size:16px;color:white;margin:0px 0px 0px 30px;}
+	.h2 {font-size:16px;color:black;margin:8px 0px 0px 30px;font-size:12px;}
+	.met {text-align:right;padding:10px;position:absolute;top:40px;left:480px;font-weight:bold;font-size:15px;}
+	.reqres td { border: solid 1px gray;}
+	.api {padding:10px;}
+	.ln {background:#99CCFF;padding:2px 2px 2px 10px;font-weight:bold;}
+	.copy {background:#6688CC;margin:5px 0px 0px 0px;padding:20px;text-align:center;font-size:12px;}
+	.news { background: #FFCCAA; padding:5px; padding-left:20px; font-size:10px; }
+	b.l {color:#AA0044;}
+	u.l {color:navy;}
+</style></head><body>
+<div class="hd">
+	<div class="h0">dkxce Route ServiceSolver</div>
+	<div class="h1"><b>Route Web API</b> <span style="color:black;">version 21.12.21.23</span></div>
+	<div class="h2">   
+		<a href="null" style="color:black;">MAIN</a> |
+		<a href="status" style="color:black;">STATUS</a> |
+		<a href="help" style="color:black;">GET/POST</a> |
+		SOAP (<a href="xmlsoap" style="color:navy;">POST</a>, <a href="xmlwsdl" style="color:navy;">WSDL</a>) |
+XML-RPC (<a href="xmlrpc" style="color:navy;">POST</a>)
+  </div>
+</div>
+<div class="api">
+	<!-- description -->	
+	<b>Методы:</b><br/><div style="padding-left:40px;">	
+		<li><a href="#route">Получение маршрута</a></li>
+		<li><a href="#nearroad">Получение ближайшей дороги</a></li>
+	</div><br/>
+	<b>Передаваемые структуры:</b><br/><div style="padding-left:40px;">
+		<a target="_blank" href="route">route</a> |
+		<a target="_blank" href="nearroad">nearroad</a>
+	<br/><br/></div>
+	<b>Описание:</b><br/><div style="padding-left:40px;">
+		<a href="#route">route</a> |
+		<a href="#nearroad">nearroad</a>	 		
+	 <br/><br/></div>
+	 <b>Примеры использования:</b>
+	 <div style="padding-left:40px;">
+		<iframe src="/nms/web/index.html" style="border:1px;height:80px;width:100%;"></iframe>
+		<!--div>
+		<li><a href="/nms/web/example1.html#{lat:52.586186,lon:39.60533,zoom:12}" target="_blank">Маршруты 1</a> (Тест)</li>
+		<li><a href="/nms/web/example2.html#{lat:52.586186,lon:39.60533,zoom:12}" target="_blank">Маршруты 2</a> (Подсветка скорости)</li>
+		</div-->	
+	 </div>
+<span style="color:gray;">Search Lat, Lon: <a href="https://latitudelongitude.org/" target="_blank">https://latitudelongitude.org/</a></span><br/>
+	 
+<div class="method"><div class="hr"></div><div class="ln"><a name="route">Получение маршрута</a> <span style="color:navy;">[HTTP GET] [HTTP POST]</span></div>
+Метод: <b><u style="color:navy;"><a target="_blank" href="route">route</a></u><br/>
+<span style="color:#C0C0C0;">HTTP GET</span> ?k=<span style="color:red;" title="ключ доступа">key</span>
+&f=<span style="color:red;" title="формат вывода результата">format</span>
+&p=<span style="color:red;" title="запрашивать полилинию маршрута">polyline</span>
+&i=<span style="color:red;" title="запрашивать инструкции к маршруту">instructions</span>
+<span style="display:none">
+&ct=<span style="color:red;">userCurrentTraffic</span>
+&ht=<span style="color:red;">userHistoryTraffic</span>
+</span>
+&v=<span style="color:red;" title="допускать выезд на дорогу и съезд через встречную полосу">overtaking</span>
+&t=<span style="color:red;" title="время начала маршрута">startTime</span>
+&x=<span style="color:red;" title="Массив долгот через запятую">lon[]</span>
+&y=<span style="color:red;" title="массив широт через запятую">lat[]</span>
+&n=<span style="color:red;" title="массив имен точек через запятую">name[]</span>
+&minby=<span style="color:red;">time/dist</span>
+&o=<span style="color:red;" title="оптимизировать порядок промежуточных точек">optimize</span><br/>
+&er=<span style="color:red;">excludeLinesInRadius</span>
+&ey=<span style="color:red;">excludeLinesFromPointY[]</span>
+&ex=<span style="color:red;">excludeLinesFromPointX[]</span>
+&ra=<span style="color:red;">roadAttributes</span>
+</b><br/>
+<div style="padding-left:40px;">	
+	<br/>параметры<br/><br/>
+	<span style="color:maroon;font-size:11px;">основные параметры:</span><br/>
+	<div style="padding-left:20px;color:green;">
+		key - ключ доступа (обязательный параметр)<br/>
+		format - формат вывода результата (по умолчанию 0)<br/>
+		<div style="padding-left:20px;color:darkgreen;">
+			- [0] или [j] или [json]<br/>
+			- [1] или [t] или [txt]<br/>
+			- [2] или [x] или [xml]<br/>
+			- [3] или [k] или [kml]<br/>
+			- [4] или [g] или [geojson]<br/>
+			- [i] - вывод описания структур для запроса через ?json и ?xml <br/>
+		</div>
+		p - запрашивать полилинию маршрута (0/1, по умолчанию 1)<br/>
+		i - запрашивать инструкции к маршруту (0/1, по умолчанию 0)<br/>		
+		v - допускать выезд на дорогу и съезд через встречную полосу (0/1, по умолчанию 0)<br/>		
+		<span style="display:none">
+			ct - строить маршрут с учетом текущего трафика<br/>
+			ht - строить маршрут с учетом исторического трафика<br/>
+		</span>
+		t - время начала маршрута (dd.MM.yyyy HH:mm)<br/>
+		x - долгота (массив через запятую)<br/>
+		y - широта  (массив через запятую)<br/>
+		n - имена точек (массив через запятую)<br/><br/>
+	</div>
+	<span style="color:maroon;font-size:11px;">оптимизация маршрута:</span><br/>
+	<div style="padding-left:20px;color:green;">
+		minby - оптимизировать маршрут по времени/расстоянию (time/dist, по умолчанию time)<br/><br/>
+		<span style="color:#665533;">
+		
+	</div>
+	<span style="color:maroon;font-size:11px;">оптимизация промежуточных точек:</span><br/>
+	<div style="padding-left:20px;color:green;">
+		o - оптимизировать порядок обхода промежуточных точек (0/1, по умолчанию 0)<br/><br/>
+		<span style="color:#665533;">
+		
+	</div>
+	<span style="color:maroon;font-size:11px;">избегать проезд через участки (точки):</span><br/>
+	<div style="padding-left:20px;color:green;">		
+		ex - долгота (для точек, которые необходимо избегать; массив через запятую)<br/>
+		ey - широта (для точек, которые необходимо избегать; массив через запятую)<br/>
+		er - избегать дороги на расстоянии от указанных точек `ex` и `ey` (в метртах; 1000 м максимум; по умолчанию 50 м) <br/><br/>
+		
+	</div>
+	<span style="color:maroon;font-size:11px;">избегать определенные дороги (участки дорог):</span><br/>
+	<div style="padding-left:20px;color:green;">
+		ra - параметры построения маршрута в зависимости от характеристик дорог <small><a href="/nms/web/roads_attributes_howto.txt" target="_blank">(см. описание)</a></small><br/>
+		</span><br/>
+		<span style="color:#887788;font-size:12px;;">
+		Комментарий: Параметры `er`,`ex`,`ey` и`ra` работают только при построении маршрута <br/>
+		в начальном, конечном регионе, а также в регионах где есть промежуточные точки.<br/>
+		Если маршрут проходит через 3 региона и более в транзитных регионах при расчете<br/> 
+		маршрута заданные условия не учитываются! При необходимости такого расчета следует <br/>
+		использовать промежуточные точки.<br/><br/>
+		</span>
+	</div>
+	обязательные параметры:
+	<div style="padding-left:20px;color:maroon;">
+		key, x, y
+	</div></br>
+    примеры:
+	<div style="padding-left:20px;color:navy;">
+		HTTP GET: <a href="route?k=test&f=2&minby=time&x=39.5685,39.5788&y=52.59708,52.63228&n=start_A,destination_A" target="_blank">route?k=test&f=2&minby=time&x=39.5685,39.5788&y=52.59708,52.63228&n=start_A,destination_A</a><br/>
+		HTTP GET: <a href="route?k=test&f=2&minby=time&x=39.5685,39.5788,39.5685&y=52.59708,52.63228,52.59708&n=start_A,destination_A,return_A" target="_blank">route?k=test&f=2&minby=time&x=39.5685,39.5788,39.5685&y=52.59708,52.63228,52.59708&n=start_A,destination_A,return_A</a><br/>
+		HTTP GET: <a href="route?k=test&f=2&minby=dist&x=39.5685,39.5788&y=52.59708,52.63228&n=start_A,destination_A" target="_blank">route?k=test&f=2&minby=dist&x=39.5685,39.5788&y=52.59708,52.63228&n=start_A,destination_A</a><br/>
+		HTTP GET: <a href="route?k=test&f=4&minby=time&x=39.5685,39.5788&y=52.59708,52.63228&n=start_A,destination_A" target="_blank">route?k=test&f=4&minby=time&x=39.5685,39.5788&y=52.59708,52.63228&n=start_A,destination_A</a><br/>
+		HTTP GET: <a href="route?k=test&f=2&x=39.5685,39.5788&y=52.59708,52.63228&n=start_B,destination_B&er=150&ey=55.41,55.42&ex=37.31,37.32&ra=010000000000000000000000000000AA" target="_blank">route?k=test&f=2&x=39.5685,39.5788&y=52.59708,52.63228&n=start_B,destination_B&er=150&ey=55.41,55.42&ex=37.31,37.32</a><br/>
+	</div></br>
+	структуры и примеры запросов:<br/>
+	<div style="padding-left:20px;color:navy;">
+		HTTP POST: <a href="#" onclick="test('route_json');return false;">JSON</a> (<a href="#" onclick="getdocs('route','json');return false;">I/O</a>),		
+		<a href="#" onclick="test('route_xml');return false;">XML</a> (<a href="#" onclick="getdocs('route','xml');return false;">I/O</a>),
+		<a href="#" onclick="test('route_soap');return false;">SOAP</a> (<a href="#" onclick="getdocs('route','soap');return false;">I/O</a>),
+		<a href="#" onclick="test('route_rpc');return false;">XML-RPC</a> (<a href="#" onclick="getdocs('route','rpc');return false;">I/O</a>),
+		<a href="#" onclick="test('route_geojson');return false;">GeoJSON</a>,
+		<a href="#" onclick="test('route_kml');return false;">KML</a>
+		<div id="sample_route" style="width:1000px;overflow:hidden;"></div>
+	</div></br>
+	возвращает:<br/>
+		<textarea style="padding-left:20px;border:0px;color:gray;">
+json: {
+	"driveLength":0.03, // в м
+	"driveLengthSegments ": [0.0,0.03], // в м
+	"driveTime":0.05, // в мин
+	"driveTimeSegments": [0.0,0.05], // в мин
+	"startTime":"\/Date(1332927979913+0400)\/",
+	"finishTime":"\/Date(1332927982974+0400)\/",	
+	"stops": [
+		{
+			"name": "0",
+			"lat": 52.59708,
+			"lon": 39.5685
+		},{
+			"name": "1",
+			"lat": 52.63228,
+			"lon": 39.5788
+		}],
+	"polyline":[{"x":39.56845603,"y":52.59697134},{"x":39.5689175,"y":52.59678461}],
+	"polylineSegments":[0,140],	
+	"instructions":[
+		{"no":1,"iToDo":"Start at 0","iToGo":"","iStreet":"","x":39.56845603,"y":52.59697134,"sTime":0.0,"sLen":0.0,"tTime":"\/Date(1332927979913+0400)\/","tLen":0.0},
+		{
+			"no":2,
+			"iToDo":"Go east on МИЧУРИНА ул. toward НАГОРНАЯ ул.\r\nНАГОРНАЯ ул.", // инструкция
+			"iToGo":"Drive < 0.1 km ~ < 1 min", // движение
+			"iStreet":"МИЧУРИНА ул.", // улица
+			"x":39.56845603,
+			"y":52.59697134,
+			"sTime":0.05, // время движения по сегменту в мин
+			"sLen":0.03, // длина сегмента в м
+			"tTime":"\/Date(1332927979913+0400)\/", // время прибытия к сегменту маршрута
+			"tLen":0.0 // общая длина от начала до сегмента
+		},
+		{"no":3,"iToDo":"Finish at Location 1, on the right","iToGo":"","iStreet":"","x":39.5689175,"y":52.59678461,"sTime":0.0,"sLen":0.0,"tTime":"\/Date(1332927982974+0400)\/","tLen":0.03}],
+	"instrunctionsSegments": [0,27],	
+	"LastError":""	
+	}
+		</textarea><br/>
+		<textarea style="padding-left:20px;border:0px;color:gray;">
+xml: 
+<?xml version="1.0" encoding="utf-8"?>
+	<Route>
+		<driveLength>0.03</driveLength>
+		<driveLengthSegments>
+			<dls>0</dls>
+			<dls>0.03</dls>
+		</driveLengthSegments>
+		<driveTime>0.05</driveTime>
+		<driveTimeSegments>
+			<dts>0</dts>
+			<dts>0.05</dts>
+		</driveTimeSegments>
+		<startTime>2012-03-28T13:46:10.0383694+04:00</startTime>
+		<finishTime>2012-03-28T13:46:13.099</finishTime>
+		<stops>
+			<Stop lat="52.59708" lon="39.5685">0</Stop>
+			<Stop lat="52.63228" lon="39.5788">1</Stop>
+		</stops>		
+		<polyline>
+			<p x="39.56845603" y="52.59697134" />
+			<p x="39.5689175" y="52.59678461" />
+		</polyline>
+		<polylineSegments><ps>0</ps><ps>140</ps></polylineSegments>
+		<instructions>
+			<i no="1" x="39.56845603" y="52.59697134" sTime="0" sLen="0" tTime="2012-03-28T13:46:10.038" tLen="0">
+				<iToDo>Start at 0</iToDo>
+				<iToGo />
+				<iStreet />
+			</i>
+			<i no="2" x="39.56845603" y="52.59697134" sTime="0.05" sLen="0.03" tTime="2012-03-28T13:46:10.038" tLen="0">
+				<iToDo>Go east on МИЧУРИНА ул. toward НАГОРНАЯ ул. НАГОРНАЯ ул.</iToDo>
+				<iToGo>Drive &lt; 0.1 km ~ &lt; 1 min</iToGo>
+				<iStreet>МИЧУРИНА ул.</iStreet>
+			</i>
+			<i no="3" x="39.5689175" y="52.59678461" sTime="0" sLen="0" tTime="2012-03-28T13:46:13.099" tLen="0.03">
+				<iToDo>Finish at Location 1, on the right</iToDo>
+				<iToGo />
+				<iStreet />
+			</i>
+		</instructions>
+		<instrunctionsSegments><is>0</is><is>27</is></instrunctionsSegments>		
+		<LastError />		
+	</Route>
+		</textarea></br>
+		 - driveLength - общая длина маршрута в метрах (от начальной до конечной точки);<br/>
+		 - driveLengthSegments - длина маршрута от начальной точки до каждой точки пути, включая начальную точку;<br/>
+		 - driveTime - общее время движения по маршруту в минутах (от начальной до конечной точки);<br/>
+		 - driveTimeSegments - время движения по маршруту от начальной точки до каждой точки пути, включая начальную точку;<br/>
+		 - stops - список точек пути (включая начальную точку) в порядке обхода (в случае оптимизации порядок может меняться);<br/>
+		 - instructions - описание движения по маршруту;<br/>
+		 - instructionsSegments - индекс, указывающий на элемент массива instructions, соответствующий каждой точке пути, включая начальную точку;<br/>
+		 - polyline - вектор маршрута;<br/>
+		 - polylineSegments - индекс, указывающий на элемент массива polyline, соответствующий каждой точке пути, включая начальную точку;<br/> 
+		<br/>		
+</div></div>
+
+<div class="method"><div class="hr"></div><div class="ln"><a name="nearroad">Получение ближайшей дороги</a> <span style="color:navy;">[HTTP GET] [HTTP POST]</span></div>
+Метод: <b><u style="color:navy;"><a target="_blank" href="nearroad">nearroad</a></u><br/>
+<span style="color:#C0C0C0;">HTTP GET</span> ?k=<span style="color:red;" title="ключ доступа">key</span>&f=<span style="color:red;" title="формат вывода результата">format</span>&n=<span style="color:red;" title="запрашивать названия дорог">names</span>&x=<span style="color:red;" title="Массив долгот через запятую">lon[]</span>&y=<span style="color:red;" title="массив широт через запятую">lat[]</span></b><br/>
+<div style="padding-left:40px;">	
+	параметры:<br/>
+	<div style="padding-left:20px;color:green;">
+		key - ключ доступа (обязательный параметр)<br/>
+		format - формат вывода результата (по умолчанию 0)<br/>
+		<div style="padding-left:20px;color:darkgreen;">
+			- [0] или [j] или [json]<br/>
+			- [1] или [t] или [txt]<br/>
+			- [2] или [x] или [xml]<br/>
+			- [i] - вывод описания структур для запроса через ?json и ?xml <br/>
+		</div>
+		n - запрашивать названия дорог (0/1, по умолчанию 0)<br/>
+		x - долгота (массив через запятую)<br/>
+		y - широта  (массив через запятую)
+	</div>
+	обязательные параметры:
+	<div style="padding-left:20px;color:maroon;">
+		key, x, y
+	</div>
+    примеры:
+	<div style="padding-left:20px;color:navy;">
+		HTTP GET: <a href="nearroad?k=TEST&f=json&x=39.566334145326486,39.609832763671875,37.39,49.49,37.15,37.38,49.12214&y=52.61555643344044,52.61555643344044,55.45,57.82,55.47,55.45,55.78874" target="_blank">nearroad?k=TEST&f=json&x=39.566334145326486,39.609832763671875,37.39,49.49,37.15,37.38&y=52.61555643344044,52.61555643344044,55.45,57.82,55.47,55.45</a><br/>
+	</div>
+	структуры и примеры запросов:<br/>
+	<div style="padding-left:20px;color:navy;">
+		HTTP POST: <a href="#" onclick="test('nearroad_json');return false;">JSON</a> (<a href="#" onclick="getdocs('nearroad','json');return false;">I/O</a>),
+		<a href="#" onclick="test('nearroad_xml');return false;">XML</a> (<a href="#" onclick="getdocs('nearroad','xml');return false;">I/O</a>),
+		<a href="#" onclick="test('nearroad_soap');return false;">SOAP</a> (<a href="#" onclick="getdocs('nearroad','soap');return false;">I/O</a>),
+		<a href="#" onclick="test('nearroad_rpc');return false;">XML-RPC</a> (<a href="#" onclick="getdocs('nearroad','rpc');return false;">I/O</a>)
+		<div id="sample_nearroad" style="width:1000px;overflow:hidden;"></div>
+	</div>	
+		&nbsp;<br/>
+</div></div>
+
+
+</div><div class="copy">Copyrights &copy; milokz@gmail.com<br/><a href="/nms/">main page</a></div>
+
+<script>
+		String.prototype.replaceAll = function(search, replacement) {
+			var target = this;
+			return target.replace(new RegExp(search, 'g'), replacement);
+		};
+
+		var io = '<table class="reqres" width="1000px"><tr><td width="300px;">Client Request</td><td width="700px;">Server Response</td></tr><tr height="200px;"><td><textarea style="width:100%;height:100%;border:none;background-color:#CCFFCC;">{0}</textarea></td><td><textarea style="width:100%;height:100%;border:none;">{1}</textarea></td></tr></table>';
+		
+		function test(no)
+		{	
+			if(no == 'route_json')
+				reqres('route', "{k:'TEST',xy:[{x:39.5685,y:52.59708,n:'start_B'},{x:39.5788,y:52.63228,n:'destination_B'}],er:50,exy:[{x:37.31,y:55.41},{x:37.32,y:55.42}],ra:'010000000000000000000000000000AA'}", 'sample_route',  false);		
+			if(no == 'route_geojson')
+				reqres('route', "{k:'TEST',f:'geojson',xy:[{x:39.5685,y:52.59708,n:'start_B'},{x:39.5788,y:52.63228,n:'destination_B'}],er:50,exy:[{x:37.31,y:55.41},{x:37.32,y:55.42}],ra:'010000000000000000000000000000AA'}", 'sample_route',  false);		
+			if(no == 'route_kml')
+				reqres('route', '<?xml version="1.0" encoding="utf-8"?><cRoute><k>TEST</k><f>kml</f><xy x="39.5685" y="52.59708" n="start_B"/><xy x="39.5788" y="52.63228" n="destination_B"/><er>50</er><exy x="37.31" y="55.41"/><exy x="37.32" y="55.42"/><ra>010000000000000000000000000000AA</ra></cRoute>', 'sample_route',  true);
+			if(no == 'route_xml')
+				reqres('route', '<?xml version="1.0" encoding="utf-8"?><cRoute><k>TEST</k><xy x="39.5685" y="52.59708" n="start_B"/><xy x="39.5788" y="52.63228" n="destination_B"/><er>50</er><exy x="37.31" y="55.41"/><exy x="37.32" y="55.42"/><ra>010000000000000000000000000000AA</ra></cRoute>', 'sample_route',  true);
+			if(no == 'route_soap')
+				reqres('route', '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><route><cRoute><k>TEST</k><xy x="39.5685" y="52.59708" n="start_B"/><xy x="39.5788" y="52.63228" n="destination_B"/><er>50</er><exy x="37.31" y="55.41"/><exy x="37.32" y="55.42"/><ra>010000000000000000000000000000AA</ra></cRoute></route></soap:Body></soap:Envelope>', 'sample_route',  true);
+			if(no == 'route_rpc')
+				reqres('route', '<?xml version="1.0"?><methodCall><methodName>route</methodName><params><param><struct><member><name>k</name><value><string>TEST</string></value></member><member><name>xy</name><value><array><data><value><struct><member><name>y</name><value><double>52.59708</double></value></member><member><name>x</name><value><double>39.5685</double></value></member><member><name>n</name><value><string>start_B</string></value></member></struct></value><value><struct><member><name>y</name><value><double>52.63228</double></value></member><member><name>x</name><value><double>39.5788</double></value></member><member><name>n</name><value><string>destination_B</string></value></member></struct></value></data></array></value></member><member><name>er</name><value><string>50</string></value></member><member><name>exy</name><value><array><data><value><struct><member><name>y</name><value><double>55.41</double></value></member><member><name>x</name><value><double>37.31</double></value></member></struct></value><value><struct><member><name>y</name><value><double>55.42</double></value></member><member><name>x</name><value><double>37.32</double></value></member></struct></value></data></array></value></member><member><name>ra</name><value><string>010000000000000000000000000000AA</string></value></member></struct></param></params></methodCall>', 'sample_route',  true);
+			
+			if(no == 'nearroad_json')
+				reqres('nearroad', "{k:'TEST',y:[52.61555643344044,52.61555643344044,55.45,57.82,55.47,55.45],x:[39.566334145326486,39.609832763671875,37.39,49.49,37.15,37.38]}", 'sample_nearroad',  false);		
+			if(no == 'nearroad_xml')
+				reqres('nearroad', '<?xml version="1.0" encoding="utf-8"?><cNearRoad><k>TEST</k><y>52.61555643344044</y><y>52.61555643344044</y><y>55.45</y><y>57.82</y><y>55.47</y><y>55.45</y><x>39.566334145326486</x><x>39.609832763671875</x><x>37.39</x><x>49.49</x><x>37.15</x><x>37.38</x></cNearRoad>', 'sample_nearroad',  true);
+			if(no == 'nearroad_soap')
+				reqres('nearroad', '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><nearroad><cNearRoad><k>TEST</k><y>52.61555643344044</y><y>52.61555643344044</y><y>55.45</y><y>57.82</y><y>55.47</y><y>55.45</y><x>39.566334145326486</x><x>39.609832763671875</x><x>37.39</x><x>49.49</x><x>37.15</x><x>37.38</x></cNearRoad></nearroad></soap:Body></soap:Envelope>', 'sample_nearroad',  true);
+			if(no == 'nearroad_rpc')
+				reqres('nearroad', '<?xml version="1.0"?><methodCall><methodName>nearroad</methodName><params><param><struct><member><name>k</name><value><string>TEST</string></value></member><member><name>y</name><value><array><data><value><double>52.61555643344044</double></value><value><double>52.61555643344044</double></value><value><double>55.45</double></value><value><double>57.82</double></value><value><double>55.47</double></value><value><double>55.45</double></value></data></array></value></member><member><name>x</name><value><array><data><value><double>39.566334145326486</double></value><value><double>39.609832763671875</double></value><value><double>37.39</double></value><value><double>49.49</double></value><value><double>37.15</double></value><value><double>37.38</double></value></data></array></value></member></struct></param></params></methodCall>', 'sample_nearroad',  true);
+			
+		}
+		
+		function getdocs(method, fmt)
+		{
+				var myres = io;
+				$("#sample_"+method)[0].innerHTML =  '<span style="color:red;font-size:12px;">... Загрузка...</span>';
+				var xhr = $.get( "getdocs?method="+method+"&io=in&type="+fmt, function(data) {
+					$("#sample_"+method)[0].innerHTML =  myres = myres.replace('{0}', data.replaceAll('{METHOD}',method).replaceAll('<br/>',''));
+				}).done(function() {
+					//alert('ok');
+				}).fail(function() {
+					$("#sample_"+method)[0].innerHTML = myres = myres.replace('{0}', 'ERROR');
+				}).always(function() {
+					//alert( "finished" );
+				});
+				
+				$("#sample_"+method)[0].innerHTML =  '<span style="color:red;font-size:12px;">... Загрузка...</span>';
+				var xhr = $.get( "getdocs?method="+method+"&io=out&type="+fmt, function(data) {
+					$("#sample_"+method)[0].innerHTML =  myres = myres.replace('{1}', data.replaceAll('&lt;methodCall&gt;&lt;methodName&gt;{METHOD}&lt;/methodName&gt;','&lt;methodResponse&gt;').replaceAll('&lt;/methodCall&gt;','&lt;/methodResponse&gt;').replaceAll('{METHOD}',method+'Response').replaceAll('<br/>',''));
+				}).done(function() {
+					//alert('ok');
+				}).fail(function() {
+					$("#sample_"+method)[0].innerHTML = myres = myres.replace('{1}', 'ERROR');
+				}).always(function() {
+					//alert( "finished" );
+				});
+		}
+		
+		function reqres(method, body, div, xml)
+		{
+				$("#"+div)[0].innerHTML = '<span style="color:red;font-size:12px;">... Загрузка...</span>';
+				var xhr = $.post(method, body, function( data ) {
+					$("#"+div)[0].innerHTML = io.replace('{0}',this.data).replace('{1}', xml ? (new XMLSerializer()).serializeToString(data)  :data);
+				}).done(function(data) {
+					//alert('ok');
+				}).fail(function() {
+					$("#"+div)[0].innerHTML = 'ERROR';
+				}).always(function() {
+					//alert( "finished" );
+				});
+		}			
+</script>
+</body></html>

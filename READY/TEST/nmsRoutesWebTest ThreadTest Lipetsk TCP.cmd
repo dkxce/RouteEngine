@@ -1,0 +1,1 @@
+nmsRoutesWebTest.exe TEST tcp "127.0.0.1" 10 lip

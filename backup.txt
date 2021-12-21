@@ -1,0 +1,4 @@
+*.*
+READY\*.*
+READY\_SHAPES_\*.*
+READY\GRAPHS\*.rt

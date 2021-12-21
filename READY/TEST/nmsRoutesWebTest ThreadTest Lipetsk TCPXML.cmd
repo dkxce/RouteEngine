@@ -1,0 +1,1 @@
+nmsRoutesWebTest.exe TEST tcpxml "127.0.0.1" 10 lip

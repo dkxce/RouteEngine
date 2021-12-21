@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file was created by NSISDialogDesigner 1.4.2.0
+http://coolsoft.altervista.org/nsisdialogdesigner
+Do not edit manually!
+-->
+<Dialog Name="xForms_SysID" Title="Ограничения" Subtitle="Информация о системе">
+  <Label Name="LSID" Location="85, 99" Size="323, 15" Text="$CurrentSysID" Font="Microsoft Sans Serif, 8.25pt, style=Bold" ForeColor="Maroon" TabIndex="0" />
+  <Label Name="Label2" Location="66, 76" Size="67, 15" Text="System ID:" Font="Microsoft Sans Serif, 8.25pt, style=Bold" ForeColor="Black" TabIndex="1" />
+  <Label Name="Label1" Location="67, 41" Size="332, 27" Text="Данное ПО сконфигурировано только для работы &#xD;&#xA;на данной системе. " Font="Microsoft Sans Serif, 8.25pt, style=Bold" ForeColor="Black" TabIndex="2" />
+</Dialog>

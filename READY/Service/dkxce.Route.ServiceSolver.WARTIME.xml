@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SvcConfig>  
+  <defProto>http</defProto>
+  <defArea>multiple</defArea>
+  <defHTTP>82</defHTTP>
+  <defMode>multiclient</defMode>
+  
+  <minThreads>2</minThreads>
+  <maxThreads>8</maxThreads>
+  <mucObjects>8</mucObjects>
+  
+  <globalRegions>10,13,17,18,6,46</globalRegions>
+  <threadRegions>11,24,14,31,33,39,16,25,5,4,44,30,74</threadRegions>
+  
+  <threadLog>false</threadLog>
+  <threadLogMem>false</threadLogMem>  
+  
+  <MultiRegion>
+		<Graphs>..\GRAPHS</Graphs>
+		<Regions>..\Regions</Regions>
+		<RGWays>..\RGWays</RGWays>
+  </MultiRegion> 
+
+  <http.showhost>true</http.showhost>
+  <http.description>War Time Configuration</http.description>
+</SvcConfig>

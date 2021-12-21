@@ -1,0 +1,404 @@
+﻿<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Test Routes</title>
+		<meta name="description" content="dkxce.Routes" />
+		<link rel="stylesheet" href="leaflet/leaflet.css" />
+		<link rel="stylesheet" href="leaflet/leaflet.css" />
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" href="leaflet/leaflet.ie.css" />
+			<link rel="stylesheet" href="leaflet/L.Control.Zoomslider/L.Control.Zoomslider.ie.css" />
+		<![endif]-->		
+		<script src="leaflet/leaflet.js"></script>		
+		<link rel="stylesheet" href="leaflet/L.Control.Zoomslider/L.Control.Zoomslider.css" />		
+		<script src="leaflet/L.Control.Zoomslider/L.Control.Zoomslider.js"></script>			
+	</head>
+	
+	<body style="margin:0px;padding:0px;">
+		<div id="map" style="width: 100%; height: 100%;"></div>
+	</body>
+	<script>
+		var map = map = L.map('map', {center: [52.58065,39.51994], zoom: 10, zoomControl: false, zoomsliderControl: true});
+
+		// варианты функций, учитывающие возможность назначения разных проекции карте и части слоев
+		var project = function (map, crs, latlng) {
+			return crs.latLngToPoint(latlng, map.getZoom());
+		};
+
+		L.TileLayer.prototype._update = function () {
+			var bounds = this._map.getPixelBounds(),
+				zoom = this._map.getZoom(),
+				tileSize = this.options.tileSize;
+
+			if (typeof this.options.crs !== 'undefined') {
+				bounds.min = project(this._map, this.options.crs, this._map.unproject(bounds.min));
+				bounds.max = project(this._map, this.options.crs, this._map.unproject(bounds.max));
+			}
+
+			if (zoom > this.options.maxZoom || zoom < this.options.minZoom) {
+				return;
+			}
+
+			var nwTilePoint = new L.Point(
+					Math.floor(bounds.min.x / tileSize),
+					Math.floor(bounds.min.y / tileSize)),
+				seTilePoint = new L.Point(
+					Math.floor(bounds.max.x / tileSize),
+					Math.floor(bounds.max.y / tileSize)),
+				tileBounds = new L.Bounds(nwTilePoint, seTilePoint);
+
+			this._addTilesFromCenterOut(tileBounds);
+
+			if (this.options.unloadInvisibleTiles || this.options.reuseTiles) {
+				this._removeOtherTiles(tileBounds);
+			}
+		};
+
+		L.TileLayer.prototype._getTilePos = function (tilePoint) {			
+			var origin = this._map.getPixelOrigin(),
+				tileSize = this.options.tileSize;
+
+			if (typeof this.options.crs !== 'undefined') {
+				origin = project(this._map, this.options.crs, this._map.unproject(origin));
+			}
+	
+			return tilePoint.multiplyBy(tileSize).subtract(origin);
+		};
+		
+		var mapnik = L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 17, attribution: 'Maps &copy; <a href="http://openstreetmap.org">OSM</a>' });		
+		var osmOpnvkarte = L.tileLayer('http://tile.xn--pnvkarte-m4a.de/tilegen/{z}/{x}/{y}.png', { maxZoom: 17, attribution: 'Maps &copy; <a href="http://openstreetmap.org">OSM</a>' });		
+		
+		var navitel = L.tileLayer('', { maxZoom: 17, attribution: 'Maps &copy; <a href="http://navitel.su">Navitel</a>' });		
+		navitel.getTileUrl = function (tilePoint, zoom) {
+			var xx = tilePoint.x.toString();
+			while(xx.length < 8) xx = '0'+xx;
+			var zz = tilePoint.z.toString();
+			while(zz.length < 2) zz = '0'+zz;
+			var yy = Math.round(Math.pow(2,tilePoint.z)-tilePoint.y)-1;
+			yy = yy.toString();
+			while(yy.length < 8) yy = '0'+yy;
+			return 'http://maps.navitel.su/navitms.fcgi?t=' + xx + ',' + yy + ',' + zz;
+		};
+		
+		var osmWikiMapTiles = L.tileLayer('', { maxZoom: 17, attribution: 'Maps &copy; WikiMapia' });
+		osmWikiMapTiles.getTileUrl = function (tilePoint, zoom) {
+			return "http://i" + ((tilePoint.x % 4) + (tilePoint.y % 4)*4) + ".wikimapia.org/?lng=1&" + 'x=' + tilePoint.x + '&y='+tilePoint.y+'&zoom='+tilePoint.z;
+		};
+		
+		var yahooMapTiles = L.tileLayer('http://us.maps1.yimg.com/us.tile.maps.yimg.com/tl?v=4.1&md=2&r=1', { maxZoom: 17, attribution: 'Maps &copy; Yahoo' });
+		var yahooSatTiles = L.tileLayer('http://aerial.maps.yimg.com/ximg?v=1.8&t=a&s=256&r=1', { maxZoom: 17, attribution: 'Maps &copy; Yahoo' });
+		var yahooOverlayerTiles = L.tileLayer('http://aerial.maps.yimg.com/ximg?v=2.5&t=p&s=256&r=1', { maxZoom: 17, attribution: 'Maps &copy; Yahoo' });
+		var yahooEncode = function (tilePoint, zoom) {
+			var url = L.TileLayer.prototype.getTileUrl.call(this, tilePoint, zoom);
+			return url + '&x='+tilePoint.x+'&y='+(((Math.round(Math.pow(2,tilePoint.z))/2)-1)-tilePoint.y)+'&z='+(tilePoint.z+1);
+		};
+		yahooMapTiles.getTileUrl = yahooEncode;
+		yahooSatTiles.getTileUrl = yahooEncode;
+		yahooOverlayerTiles.getTileUrl = yahooEncode;
+		
+		var yahooHybTiles = new L.LayerGroup();
+		yahooHybTiles.addLayer(yahooSatTiles).addLayer(yahooOverlayerTiles);
+		yahooHybTiles.hybrid = true;
+		
+		var rosreestrMapTiles = L.tileLayer('http://c.maps.rosreestr.ru/ArcGIS/rest/services/BaseMaps/BaseMapAnno/MapServer/tile/{z}/{y}/{x}', { maxZoom: 17, attribution: 'Maps &copy; РосРеестр' });
+		var rosreestrMapTiles2 = L.tileLayer('http://c.maps.rosreestr.ru/ArcGIS/rest/services/BaseMaps/BaseMap/MapServer/tile', { maxZoom: 17, attribution: 'Maps &copy; РосРеестр' });
+		var genStab = L.tileLayer('http://www.in7ane.com/topomaps/tiles/{z}/{x}/{y}.jpg', { maxZoom: 17, attribution: 'Maps &copy; ГенШтаб' });
+		var maps4free = L.tileLayer('http://www.maps-for-free.com/layer/relief/z{z}/row{y}/{z}_{x}-{y}.jpg', { maxZoom: 17, attribution: 'Maps &copy; Maps-for-Free' });
+		
+		var msMapTiles = L.tileLayer('', { maxZoom: 17, attribution: 'Maps &copy; Microsoft' });
+		msMapTiles.getTileUrl = function (tilePoint, zoom) {
+			var imageSuffix = '.png';
+			var mapTypeString = "r"; // r/a/h - png/jpeg/jpeg
+			var mapTilesVersion = 22;
+			var sTile = '000000';
+			sTile += (parseInt(tilePoint.y.toString(2) * 2) + parseInt(tilePoint.x.toString(2)));
+			sTile = sTile.substring(sTile.length - tilePoint.z, sTile.length);
+			return 'http://' + mapTypeString + sTile.substring(sTile.length-1, sTile.length) + '.ortho.tiles.virtualearth.net/tiles/' + mapTypeString + sTile + imageSuffix + '?g=' + mapTilesVersion;
+		};
+		var msMapHybTiles = L.tileLayer('', { maxZoom: 17, attribution: 'Maps &copy; Microsoft' });
+		msMapHybTiles.getTileUrl = function (tilePoint, zoom) {
+			var imageSuffix = '.jpeg';
+			var mapTypeString = "h"; // r/a/h - png/jpeg/jpeg
+			var mapTilesVersion = 22;
+			var sTile = '000000';
+			sTile += (parseInt(tilePoint.y.toString(2) * 2) + parseInt(tilePoint.x.toString(2)));
+			sTile = sTile.substring(sTile.length - tilePoint.z, sTile.length);
+			return 'http://' + mapTypeString + sTile.substring(sTile.length-1, sTile.length) + '.ortho.tiles.virtualearth.net/tiles/' + mapTypeString + sTile + imageSuffix + '?g=' + mapTilesVersion;
+		};
+		
+		// слои Google/Yandex (прямой доступ к тайлам, только для тех у кого есть соответствующий договор с Google/Yandex)
+		var GoogleMapLayer = new L.TileLayer('http://{s}.google.com/vt/lyrs=m@177000000&hl=ru&src=app&x={x}&s=&y={y}&z={z}&s=Ga', {attribution: 'Data, imagery and map information provided by <a href="http://maps.google.com" target="_blank">Google</a>', maxZoom: 19, subdomains: ['mts0','mts1'], zIndex: 2});
+		var GoogleSatLayer = new L.TileLayer('http://{s}.google.com/kh/v=134&src=app&x={x}&s=&y={y}&z={z}&s=G', {attribution: 'Data, imagery and map information provided by <a href="http://maps.google.com" target="_blank">Google</a>', maxZoom: 19, subdomains: ['khms0','khms1'], zIndex: 3});
+		var GoogleMapOverlayLayer = new L.TileLayer('http://{s}.google.com/vt/lyrs=h@177000000&hl=ru&src=app&x={x}&s=&y={y}&z={z}&s=G', {attribution: 'Data, imagery and map information provided by <a href="http://maps.google.com" target="_blank">Google</a>', maxZoom: 19, subdomains: ['mts0','mts1'], zIndex: 4});
+
+		var GoogleHybridLayer = new L.LayerGroup();
+		GoogleHybridLayer.addLayer(GoogleSatLayer).addLayer(GoogleMapOverlayLayer);
+		GoogleHybridLayer.hybrid = true;
+
+		var YandexMapLayer = YandexMapLayer = new L.TileLayer('http://{s}.maps.yandex.net/tiles?l=map&v=2.31.1&x={x}&s=&y={y}&z={z}&lang=ru-RU',
+									  {attribution: 'Data, imagery and map information provided by <a href="http://maps.yandex.ru" target="_blank">Yandex</a>',
+									   subdomains: ['vec01','vec02','vec03','vec04'],
+									   maxZoom: 17, crs: L.CRS.EPSG3395,
+									   zIndex: 5});
+									   
+		var YandexMapOverlayLayer = new L.TileLayer('http://{s}.maps.yandex.net/tiles?l=skl&v=2.31.1&x={x}&s=&y={y}&z={z}&lang=ru-RU', {attribution: 'Data, imagery and map information provided by <a href="http://maps.yandex.ru" target="_blank">Yandex</a>', subdomains: ['vec01','vec02','vec03','vec04'], maxZoom: 17, crs: L.CRS.EPSG3395, zIndex: 6});
+		var YandexSatLayer = new L.TileLayer('http://{s}.maps.yandex.net/tiles?l=sat&v=1.35.0&x={x}&s=&y={y}&z={z}&lang=ru-RU', {attribution: 'Data, imagery and map information provided by <a href="http://maps.yandex.ru" target="_blank">Yandex</a>', subdomains: ['sat01','sat02','sat03','sat04'], maxZoom: 17, crs: L.CRS.EPSG3395, zIndex: 7});
+
+		YandexHybridLayer = new L.LayerGroup();
+		YandexHybridLayer.addLayer(YandexSatLayer).addLayer(YandexMapOverlayLayer);
+		YandexHybridLayer.hybrid = true;
+
+		var GoogleTrafficLayer = new L.TileLayer('http://{s}.google.com/vt?hl=ru&src=app&lyrs=m@177000000,traffic|seconds_into_week:-1&x={x}&s=&y={y}&z={z}&style=15', {attribution: 'Traffic data provided by <a href="http://maps.google.com" target="_blank">Google</a>', maxZoom: 19, subdomains: ['mts0','mts1'], traffic: true, zIndex: 21});
+
+		var YandexTrafficLayer = new L.TileLayer('http://jgo.maps.yandex.net/tiles?l=trf&lang=ru-RU&x={x}&s=&y={y}&z={z}', {attribution: 'Traffic data provided by <a href="http://maps.yandex.ru" target="_blank">Yandex</a>', maxZoom: 17, crs: L.CRS.EPSG3395, traffic: true, zIndex: 22});
+		var YandexExtTrafficLayer = new L.TileLayer('http://jgo.maps.yandex.net/tiles?l=trf,trfe&lang=ru-RU&x={x}&s=&y={y}&z={z}', {attribution: 'Traffic data provided by <a href="http://maps.yandex.ru" target="_blank">Yandex</a>', maxZoom: 17, crs: L.CRS.EPSG3395, traffic: true, zIndex: 23});
+		var YandexPeoplesLayer = new L.TileLayer('http://{s}.wvec.maps.yandex.net/?l=wmap&x={x}&y={y}&z={z}', {attribution: 'Traffic data provided by <a href="http://maps.yandex.ru" target="_blank">Yandex</a>', maxZoom: 17, crs: L.CRS.EPSG3395, traffic: true, subdomains: ['01','02','03','04'], zIndex: 23});
+	
+
+		var upTrafficYa = function (tilePoint, zoom) {
+			var tm = new Date();
+			var url = L.TileLayer.prototype.getTileUrl.call(this, tilePoint, zoom);
+			return url + '&tm=' + parseInt(tm.getTime()/1000, 10);
+		};
+		YandexTrafficLayer.getTileUrl = upTrafficYa;
+		YandexExtTrafficLayer.getTileUrl = upTrafficYa;
+
+		mapnik.addTo(map);	// default	
+		var basemaps = {					
+				  "OSM Mapnik": mapnik, 
+				  "OSM Opnvkarte": osmOpnvkarte, 
+				  "Navitel": navitel,
+				  "WikiMapia": osmWikiMapTiles,
+				  "Yahoo! (Карта)": yahooMapTiles,
+				  "Yahoo! (Спутник)": yahooHybTiles,
+				  "РосРеестр": rosreestrMapTiles,
+				  "РосРеестр (2)": rosreestrMapTiles2,
+				  "ГенШтаб (Сканы)": genStab,
+				  "Maps For Free (Рельеф)": maps4free,
+				  "MS Map (Карта)": msMapTiles,
+				  "MS Map (Спутник)": msMapHybTiles,
+				  "Google (Карта)": GoogleMapLayer,
+			      "Google (Спутник)": GoogleHybridLayer,
+			      "Яндекс (Карта)": YandexMapLayer,
+			      "Яндекс (Спутник)": YandexHybridLayer,
+				  "Яндекс (Народная)": YandexPeoplesLayer
+				  };
+		var trafficLayers = {
+					"Google Пробки": GoogleTrafficLayer,
+    				 "Яндекс Пробки": YandexTrafficLayer,
+    				 "Яндекс Пробки + События": YandexExtTrafficLayer
+					 };
+		L.control.layers(basemaps, trafficLayers).addTo(map);
+		
+		var cc = 0; // click counter
+		var fc; // first click
+		var sc; // second click
+		
+		var m1 = null; // start marker
+		var m2 = null; // end marker
+		var im = null; // instructions marker
+		
+		var path = null; // polyline
+		var ctx = ''; // route context description
+		var res = null; // route result
+		
+		var iconStart = L.icon({ iconUrl: 'mapMarkerS.png', iconSize: [20, 32], iconAnchor: [10, 32], popupAnchor: [10, 10] });
+		var iconEnd = L.icon({ iconUrl: 'mapMarkerF.png', iconSize: [20, 32], iconAnchor: [10, 32], popupAnchor: [10, 10] });
+		var iconIndex = L.icon({ iconUrl: 'mapMarkeri.png', iconSize: [20, 32], iconAnchor: [10, 32], popupAnchor: [10, 10] });
+		var popup = null;
+		
+		map.on('click', function(e) {			
+			///////
+					cc++;					
+					if(cc == 3) { cc = 1; };
+					if (cc == 1) 
+					{					
+						fc = e.latlng;
+						window.external.Start(fc.lat,fc.lng);
+						if(m1 != null) 
+							m1.setLatLng(fc);
+						else
+						{
+							m1 = new L.Marker(e.latlng,{icon:iconStart, draggable: true});
+							m1.addTo(map);
+							m1.on('dragstart', function(e) { }); 
+							m1.on('drag', function(e) { fc = m1.getLatLng(); window.external.Start(fc.lat,fc.lng); }); 
+							m1.on('dragend', function(e) {
+								fc = m1.getLatLng();
+								window.external.Start(fc.lat,fc.lng);
+								if(sc === undefined) return;
+								GetRoute();
+							});
+						};
+					};
+					if (cc == 2) 
+					{
+						sc = e.latlng;
+						window.external.End(sc.lat,sc.lng);
+						if(m2 != null) 
+							m2.setLatLng(sc);
+						else
+						{
+							m2 = L.marker(e.latlng,{icon:iconEnd, draggable: true});							
+							m2.addTo(map);
+							m2.on('dragstart', function(e) { }); 
+							m2.on('drag', function(e) { sc = m2.getLatLng(); window.external.End(sc.lat,sc.lng); }); 
+							m2.on('dragend', function(e) {
+								sc = m2.getLatLng();
+								window.external.End(sc.lat,sc.lng);
+								GetRoute();
+							});
+							m2.on('click', function(e) {								
+								popup = L.popup({maxWidth:400}).setLatLng(e.latlng).setContent(ctx);//.addTo(map);
+								map.openPopup(popup);
+							});
+						};											
+					};
+					
+					if((m1 != null) && (m2 != null))
+					{
+						GetRoute();
+					};
+			///////
+		});
+		
+		function GetRoute()
+		{
+			map.closePopup();
+			if(im != null) map.removeLayer(im);
+			im = null;
+			
+			res = window.external.GetRoute(fc.lat,fc.lng,sc.lat,sc.lng);
+			res = new Function('','return '+res)();
+						
+			// ERROR
+			if(res.LastError.length > 0) { alert(res.LastError); return; };
+						
+			// DESCRIPTION
+			ctx = '<b>Маршрут:</b><br/>Длина: '+(res.driveLength/1000)+' км<br/>Время: '+res.driveTime+' мин<br/>Старт: '+res.startTime+'<br/>Финиш: '+res.finishTime+'<br/>';
+			if(res.instructions.length > 0)
+			{
+				ctx += '<br/><b>Описание:</b><div style="font-size:0px;height:1px;background:silver;"></div><div style="height:200px;overflow:scroll;">';
+				for(var i=0;i<res.instructions.length;i++)
+				{
+					ctx += '<b>['+res.instructions[i].no+']</b> <a href="#" onclick="SM('+i+');return false;">'+res.instructions[i].y+' '+res.instructions[i].x+'</a> '+res.instructions[i].iStreet+'<br/>';
+					if(res.instructions[i].iToDo.length > 0) ctx += res.instructions[i].iToDo+'<br/>';
+					if(res.instructions[i].iToGo.length > 0) ctx += res.instructions[i].iToGo+'<br/>';
+					ctx += '<div style="font-size:0px;height:1px;background:silver;"></div>';
+				};
+				ctx += '</div>';
+			};
+				
+			// PATH						
+			var xy = [];
+			for(var i=0;i<res.polyline.length;i++) xy[i] = new L.LatLng(res.polyline[i].y, res.polyline[i].x);
+			if(path != null) 
+				path.setLatLngs(xy);
+			else
+			{
+				path = new L.polyline(xy, {color: '#FF00F0', clickable: false, opacity: 0.7});
+				path.addTo(map);
+			};
+		}
+		
+		function ThroughRoute(grdata)
+		{
+			map.closePopup();
+			if(im != null) map.removeLayer(im);
+			im = null;
+			
+			res = new Function('','return '+grdata)();
+						
+			// ERROR
+			if(res.LastError.length > 0) { alert(res.LastError); return; };
+						
+			// DESCRIPTION
+			ctx = '<b>Маршрут:</b><br/>Длина: '+(res.driveLength/1000)+' км<br/>Время: '+res.driveTime+' мин<br/>Старт: '+res.startTime+'<br/>Финиш: '+res.finishTime+'<br/>';
+			if(res.instructions.length > 0)
+			{
+				ctx += '<br/><b>Описание:</b><div style="font-size:0px;height:1px;background:silver;"></div><div style="height:200px;overflow:scroll;">';
+				for(var i=0;i<res.instructions.length;i++)
+				{
+					ctx += '<b>['+res.instructions[i].no+']</b> <a href="#" onclick="SM('+i+');return false;">'+res.instructions[i].y+' '+res.instructions[i].x+'</a> '+res.instructions[i].iStreet+'<br/>';
+					if(res.instructions[i].iToDo.length > 0) ctx += res.instructions[i].iToDo+'<br/>';
+					if(res.instructions[i].iToGo.length > 0) ctx += res.instructions[i].iToGo+'<br/>';
+					ctx += '<div style="font-size:0px;height:1px;background:silver;"></div>';
+				};
+				ctx += '</div>';
+			};
+				
+			// PATH						
+			var xy = [];
+			for(var i=0;i<res.polyline.length;i++) xy[i] = new L.LatLng(res.polyline[i].y, res.polyline[i].x);
+			if(path != null) 
+				path.setLatLngs(xy);
+			else
+			{
+				path = new L.polyline(xy, {color: '#FF00F0', clickable: false, opacity: 0.7});
+				path.addTo(map);
+			};
+		}
+		
+		function SM(index)
+		{
+			var cco = new L.LatLng(res.instructions[index].y, res.instructions[index].x);
+			if(im != null)
+				im.setLatLng(cco);
+			else
+			{
+				im = new L.Marker(cco,{icon:iconIndex,clickable:false});
+				map.addLayer(im);
+			};
+		}
+		
+		// only in [OLD]
+		function AddMarker1(lat,lon,id){}
+		function AddMarker2(lat,lon,id){}
+		function AddMarker3(lat,lon,id){}
+		function AddStart(lat,lon,id)
+		{					
+					var fc = new L.LatLng(lat, lon);
+					cc = 1
+					{					
+						if(m1 != null) 
+							m1.setLatLng(fc);
+						else
+						{
+							m1 = new L.Marker(fc,{icon:iconStart, draggable: true});
+							m1.addTo(map);
+							m1.on('dragstart', function(e) { }); 
+							m1.on('drag', function(e) { fc = m1.getLatLng(); window.external.Start(fc.lat,fc.lng); }); 
+							m1.on('dragend', function(e) {
+								fc = m1.getLatLng();
+								window.external.Start(fc.lat,fc.lng);
+							});
+						};
+					};
+		}
+		function AddEnd(lat,lon,id)
+		{
+				var sc = new L.LatLng(lat, lon);
+				cc == 2;
+				{
+					if(m2 != null) 
+						m2.setLatLng(sc);
+					else
+					{
+						m2 = L.marker(sc,{icon:iconEnd, draggable: true});							
+						m2.addTo(map);
+						m2.on('dragstart', function(e) { }); 
+						m2.on('drag', function(e) { sc = m2.getLatLng(); window.external.End(sc.lat,sc.lng); }); 
+						m2.on('dragend', function(e) {
+							sc = m2.getLatLng();
+							window.external.End(sc.lat,sc.lng);
+						});
+					};											
+				};
+		}
+		function CenterMap(lat,lon)
+		{
+			map.setView(new L.LatLng(lat, lon));
+		}
+		function ClearMarkers(){}
+	</script>
+</html>

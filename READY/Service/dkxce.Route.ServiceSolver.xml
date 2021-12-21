@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SvcConfig desc="dkxce.Route.ServiceSolver configuration file">
+ 
+  <defProto desc="Exchange Protocol" options="tcp/remoting/http/dual(tcp+http)" default="tcp">dual</defProto>
+  <defArea desc="only one preloaded region or full map" options="one/multiple" default="multiple">one</defArea>  
+  <defPort desc="Default RouteServer TCP Port" default="7755">7755</defPort>
+  <defHTTP desc="Порт HTTP сервера прямого доступа к маршрутам" deafult="80">8080</defHTTP>
+  <!-- В режиме multithread для каждого запроса(клиента) создается новый объект класса -->
+  <!-- В режиме multiclient создается фиксированное количество объектов и при запросе клиент подключается к свободному объекту -->
+  <defMode desc="working mode (one object/new object per client/multiple objects)" options="single/multithread/multiclient" default="single">multiclient</defMode>
+ 
+  <minThreads desc="multithread min threads count" default="2">2</minThreads>
+  <maxThreads desc="multithread max threads count" default="6">8</maxThreads>
+  <fixThreads desc="multithread/multiclient fixed threads count, use only if value more than 1" default="-1">-1</fixThreads>
+  <mucObjects desc="multiclient objects count" default="4">4</mucObjects>
+ 
+  <globalRegions desc="preload regions to all threads, use for multithread and multiclient modes" format="X,X,X...,X" default="">2,4</globalRegions>
+  <threadRegions desc="preload regions to current thread, use for multithread and multiclient modes" format="X,X,X...,X" default="">7</threadRegions>
+ 
+  <threadLog desc="Вывод информации о потоках в системный лог" default="false">false</threadLog>
+  <threadLogMem desc="Вывод информации о потоках в память" default="false">true</threadLogMem>
+ 
+  <MultiRegion desc="Paths to routes data, use for full map mode">
+		<Graphs desc=".rt files">..\GRAPHS</Graphs>
+		<Regions desc="regions with bounds">..\Regions</Regions>
+		<RGWays desc=".rgway.xml files">..\RGWays</RGWays>
+  </MultiRegion>
+  <OneRegion desc="Path to single graph file (.rt), use for one region mode">
+	..\GRAPHS\010.rt
+  </OneRegion>
+ 
+  <banlist>
+		<ip>127.0.0.127</ip>
+  </banlist>
+ 
+  <http.authorization>false</http.authorization> 
+  <http.users>
+		<user name="userName" pass="userPass"/>
+  </http.users>
+  <http.showhost>false</http.showhost>
+  <http.showip>false</http.showip>
+  <http.description>Default Configuration</http.description>
+  <http.html desc="use CDATA"/>
+  <http.licenses desc="license key list">
+		<!-- ip can be empty(null) or regex to match IP address http://regexstorm.net/tester -->
+		<!-- if value starts with `!` then regex means not match -->
+		<!-- example: allow local ips: (^192.168.\d*.\d*$)|(^10.0.\d*.\d*$)|(^127.0.0.1*$) -->
+		<!-- example: block local ips: !(^192.168.\d*.\d*$)|(^10.0.\d*.\d*$)|(^127.0.0.1*$) -->
+		<license key="TEST" expires="2099-12-31T23:59:59" ip="(^192.168.\d*.\d*$)|(^10.0.\d*.\d*$)|(^127.0.0.1*$)"/>
+  </http.licenses>
+ 
+</SvcConfig>

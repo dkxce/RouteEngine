@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShapeFields>
+  <CodePageId>1251</CodePageId>
+
+  <!-- Shape File Data Source GARMIN/OSM/OSM2SHP -->
+  <SOURCE>GARMIN</SOURCE>
+  
+  <!-- GARMIN Source -->  
+  <LinkId>LINK_ID</LinkId>
+  <GarminType oms_can_be="osm2shp">GRMN_TYPE</GarminType>  
+  
+  <!-- OSM, OSM2SHP Source -->
+  <OSM_ID>OSM_ID</OSM_ID>
+  <OSM_TYPE>HIGHWAY</OSM_TYPE>  
+  <OSM_SURFACE>SURFACE</OSM_SURFACE>  
+  
+  <!-- ALL SOURCES -->  
+  <SpeedLimit required="yes">SPD_LIMIT</SpeedLimit>  
+  <RouteSpeed>ROUTE_SPD</RouteSpeed>  
+  <RouteLevel>ROUTE_LVL</RouteLevel>  
+  <OneWay required="yes">ONE_WAY</OneWay>    
+  <!-- Shape Length Field -->
+  <Length required="wanted">LEN LENG LENGTH ST_LENGTH ST_LENGTH_ SHAPE_LEN SHAPE_LENG</Length>    
+  <NAME required="wanted">STRT_ADDR</NAME>  
+  <TurnRestrictions required="wanted">TURN_RSTRS</TurnRestrictions>    
+  <TMC>TMC_CODES TMC_CODES1</TMC>
+  <RGNODE>RGNODE RGNODES</RGNODE>
+  <ACC_MASK>ACC_MASK</ACC_MASK>
+  <ATTR>ATTR</ATTR>
+  <MaxWeight>ML</MaxWeight>
+  <!--MaxAxle>AL</MaxAxle-->
+  <MaxHeight>HL</MaxHeight>
+  <!--MaxWidth>WL</MaxWidth-->
+  <!--MaxLength>LL</MaxLength-->
+  <!--MinDistance>DL</MinDistance-->
+  
+  <OSM.ADDIT.SERVICE desc="service tag">SERVICE</OSM.ADDIT.SERVICE>
+  <OSM.ADDIT.JUNCTION desc="junction tag">JUNCTION</OSM.ADDIT.JUNCTION>
+  <OSM.ADDIT.LANES desc="lanes tag">LANES</OSM.ADDIT.LANES>
+  <OSM.ADDIT.MAXACTUAL desc="maxspeed:practical tag">MAXSPEED_P</OSM.ADDIT.MAXACTUAL>
+  
+  <OSM.ADDIT_DBF.NODES desc="nodes of lines shape">[NODES].shp</OSM.ADDIT_DBF.NODES>
+  <OSM.ADDIT_DBF.NOTURN desc="turn restrictions dbf">[J0001].dbf</OSM.ADDIT_DBF.NOTURN>
+  
+  <OSM.ADDIT.PROCESS_AGG desc="process aggreagated tags, TAGS_1">false</OSM.ADDIT.PROCESS_AGG>
+  
+  <!-- END -->
+</ShapeFields>

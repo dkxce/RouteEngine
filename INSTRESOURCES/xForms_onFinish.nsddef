@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file was created by NSISDialogDesigner 1.4.2.0
+http://coolsoft.altervista.org/nsisdialogdesigner
+Do not edit manually!
+-->
+<Dialog Name="xForms_onFinish" Title="Запуск" Subtitle="Выберите опиции завершения установки">
+  <CheckBox Name="cOXML" Location="12, 141" Size="211, 24" Text="Открыть файл конфигурации XML" TabIndex="0" />
+  <CheckBox Name="cSIN" Location="12, 60" Size="309, 24" Text="Установить ServiceSolver как службу" Checked="True" TabIndex="2" Enabled="False" onChange="MessageBox MB_OK &quot;TALALA&quot;" />
+  <CheckBox Name="cMC" Location="12, 111" Size="309, 24" Text="Запустить Map Creator" TabIndex="3" Enabled="False" onChange="MessageBox MB_OK &quot;TALALA&quot;" />
+  <CheckBox Name="cRSS" Location="12, 90" Size="309, 24" Text="Запустить Route Service State" TabIndex="4" Enabled="False" onChange="MessageBox MB_OK &quot;TALALA&quot;" />
+</Dialog>

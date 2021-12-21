@@ -1,0 +1,9 @@
+Usage:  
+  dkxce.Route.ServiceSolver.exe    - running console
+  dkxce.Route.ServiceSolver.exe /?  - help
+  dkxce.Route.ServiceSolver.exe /i   - install service
+  dkxce.Route.ServiceSolver.exe /u   - uninstall service
+  dkxce.Route.ServiceSolver.exe /start   - start service
+  dkxce.Route.ServiceSolver.exe /stop   - stop service
+  dkxce.Route.ServiceSolver.exe /restart   - restart service
+  dkxce.Route.ServiceSolver.exe /status   - service status

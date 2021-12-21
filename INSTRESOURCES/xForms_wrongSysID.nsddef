@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file was created by NSISDialogDesigner 1.4.2.0
+http://coolsoft.altervista.org/nsisdialogdesigner
+Do not edit manually!
+-->
+<Dialog Name="wrongSysID" Title="Ограничения" Subtitle="Внимание...">
+  <Label Name="LSID" Location="65, 143" Size="323, 15" Text="$CurrentSysID" Font="Microsoft Sans Serif, 8.25pt, style=Bold" ForeColor="Maroon" TabIndex="0" />
+  <Label Name="Label2" Location="46, 120" Size="67, 15" Text="System ID:" Font="Microsoft Sans Serif, 8.25pt, style=Bold" ForeColor="Black" TabIndex="1" />
+  <Label Name="Label1" Location="12, 30" Size="426, 78" Text="Данное ПО сконфигурировано для работы на конкретной системе. Текущая система не поддерживается основными службами.&#xD;&#xA;&#xD;&#xA;Если вы проигнорируете данное предупреждение маршруты работать не будут!" Font="Microsoft Sans Serif, 8.25pt, style=Bold" ForeColor="Red" TabIndex="2" />
+</Dialog>

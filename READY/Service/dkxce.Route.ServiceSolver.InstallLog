@@ -1,0 +1,168 @@
+﻿Uninstalling assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   u = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Removing EventLog source dkxce.Route.ServiceSolver.
+Service dkxce.Route.ServiceSolver is being removed from the system...
+Service dkxce.Route.ServiceSolver was successfully removed from the system.
+Installing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing service dkxce.Route.ServiceSolver...
+Service dkxce.Route.ServiceSolver has been successfully installed.
+Creating EventLog source dkxce.Route.ServiceSolver in log Application...
+See the contents of the log file for the M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe assembly's progress.
+The file is located at M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog.
+Committing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Uninstalling assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   u = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Removing EventLog source dkxce.Route.ServiceSolver.
+Service dkxce.Route.ServiceSolver is being removed from the system...
+Service dkxce.Route.ServiceSolver was successfully removed from the system.
+Installing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing service dkxce.Route.ServiceSolver...
+Service dkxce.Route.ServiceSolver has been successfully installed.
+Creating EventLog source dkxce.Route.ServiceSolver in log Application...
+See the contents of the log file for the M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe assembly's progress.
+The file is located at M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog.
+Committing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing service dkxce.Route.ServiceSolver...
+Creating EventLog source dkxce.Route.ServiceSolver in log Application...
+See the contents of the log file for the M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe assembly's progress.
+The file is located at M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog.
+Rolling back assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Restoring event log to previous state for source dkxce.Route.ServiceSolver.
+Installing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing service dkxce.Route.ServiceSolver...
+Creating EventLog source dkxce.Route.ServiceSolver in log Application...
+See the contents of the log file for the M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe assembly's progress.
+The file is located at M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog.
+Rolling back assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Restoring event log to previous state for source dkxce.Route.ServiceSolver.
+Installing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing service dkxce.Route.ServiceSolver...
+Creating EventLog source dkxce.Route.ServiceSolver in log Application...
+See the contents of the log file for the M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe assembly's progress.
+The file is located at M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog.
+Rolling back assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Restoring event log to previous state for source dkxce.Route.ServiceSolver.
+Uninstalling assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   u = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Removing EventLog source dkxce.Route.ServiceSolver.
+Service dkxce.Route.ServiceSolver is being removed from the system...
+Service dkxce.Route.ServiceSolver was successfully removed from the system.
+Installing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing service dkxce.Route.ServiceSolver...
+Service dkxce.Route.ServiceSolver has been successfully installed.
+Creating EventLog source dkxce.Route.ServiceSolver in log Application...
+See the contents of the log file for the M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe assembly's progress.
+The file is located at M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog.
+Committing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing service dkxce.Route.ServiceSolver...
+Service dkxce.Route.ServiceSolver has been successfully installed.
+Creating EventLog source dkxce.Route.ServiceSolver in log Application...
+See the contents of the log file for the M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe assembly's progress.
+The file is located at M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog.
+Committing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Uninstalling assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   u = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Removing EventLog source dkxce.Route.ServiceSolver.
+Service dkxce.Route.ServiceSolver is being removed from the system...
+Service dkxce.Route.ServiceSolver was successfully removed from the system.
+Installing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Installing service dkxce.Route.ServiceSolver...
+Service dkxce.Route.ServiceSolver has been successfully installed.
+Creating EventLog source dkxce.Route.ServiceSolver in log Application...
+See the contents of the log file for the M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe assembly's progress.
+The file is located at M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog.
+Committing assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   i = 
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Uninstalling assembly 'M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe'.
+Affected parameters are:
+   u = 
+   assemblypath = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.exe
+   logfile = M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\READY\Service\dkxce.Route.ServiceSolver.InstallLog
+Removing EventLog source dkxce.Route.ServiceSolver.
+Service dkxce.Route.ServiceSolver is being removed from the system...
+Service dkxce.Route.ServiceSolver was successfully removed from the system.

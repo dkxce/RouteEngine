@@ -1,0 +1,30 @@
+register
+{
+	C:\Windows\Microsoft.NET\Framework\v2.0.50727\RegAsm.exe nmsRoutesDirectCall.dll /tlb /codebase 
+	or
+	C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\regasm.exe nmsRoutesDirectCall.dll /tlb: nmsRoutesDirectCall.tlb
+	or
+	C:\Windows\Microsoft.NET\Framework\v2.0.50727\RegAsm.exe nmsRoutesDirectCall.dll /codebase /tlb: nmsRoutesDirectCall.tlb
+}
+
+unregister
+{
+	C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\regasm.exe nmsRoutesDirectCall.dll /unregister
+}
+
+using C#
+{
+	// see: ADDR_SEARCH\_GRAPH_SOLUTION\nmsRoutesDirectCall\bin\Debug\csharp_example.cs
+	
+	nmsRoutesDirectCall.nmsRouteClient rc = new nmsRoutesDirectCall.nmsRouteClient("127.0.0.1", 7755);
+	string routeA = rc.GetRouteXML(key, new string[] { "START", "FINISH" }, new double[] { 55.45, 55.46 }, new double[] { 37.39, 37.38 }, DateTime.Now, 0x01);
+	string routeB = rc.GetRouteXML("TEST", new string[] { "start", "stop" },new double[]{55.45,55.47},new double[]{37.39,37.41},DateTime.Now,0,null,0,null);
+	string roadsC = rc.GetNearRoadXML("TEST", new double[] { 55.45, 55.47 }, new double[] { 37.39, 37.41 }, true);
+}
+
+using ActiveX pascal
+{
+	// see: ADDR_SEARCH\_GRAPH_SOLUTION\nmsRoutesDirectCall\bin\Debug\Delphi Example COM.pas
+	// see: ADDR_SEARCH\_GRAPH_SOLUTION\nmsRoutesDirectCall\bin\Debug\Delphi Indy TIdTCPClient Delphi 7.pas
+	// see: ADDR_SEARCH\_GRAPH_SOLUTION\nmsRoutesDirectCall\bin\Debug\Delphi Indy TIdTCPClient Delphi 2009.pas
+}

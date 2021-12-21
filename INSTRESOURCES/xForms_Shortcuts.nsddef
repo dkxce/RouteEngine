@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This file was created by NSISDialogDesigner 1.4.2.0
+http://coolsoft.altervista.org/nsisdialogdesigner
+Do not edit manually!
+-->
+<Dialog Name="xForms_Shortcuts" Title="Почти готово..." Subtitle="Создание дополнительных ярлыков...">
+  <Label Name="Label4" Location="12, 180" Size="392, 16" Text="Дополнения:" TabIndex="0" />
+  <Label Name="Label3" Location="12, 142" Size="392, 16" Text="Настройки:" TabIndex="1" />
+  <Label Name="Label2" Location="12, 12" Size="392, 16" Text="Справочная информация:" TabIndex="2" />
+  <CheckBox Name="CB9" Location="187, 158" Size="259, 24" Text="dkxce.Route.ServiceSolver.xml" TabIndex="3" Enabled="False" />
+  <CheckBox Name="CB8" Location="24, 158" Size="122, 24" Text="Regions.dbf" TabIndex="4" Enabled="False" />
+  <CheckBox Name="CB7" Location="187, 116" Size="100, 24" Text="SAMPLE.dbf" TabIndex="5" Enabled="False" />
+  <CheckBox Name="CB6" Location="24, 116" Size="157, 24" Text="default.fldcfg.xml" TabIndex="6" Enabled="False" />
+  <CheckBox Name="CB5" Location="24, 94" Size="422, 24" Text="Требования к Shape файлу для построения маршрутов [GARMIN].txt" TabIndex="7" Enabled="False" />
+  <CheckBox Name="CB4" Location="24, 72" Size="309, 24" Text="Требования к DBF Атрибутивная информация.xlsx" TabIndex="8" Enabled="False" />
+  <CheckBox Name="CB3" Location="24, 193" Size="239, 24" Text="Template for OSM2SHP.rar" TabIndex="9" Enabled="False" />
+  <CheckBox Name="CB2" Location="24, 50" Size="239, 24" Text="roads_garmin_and_osm_attr_support.txt" TabIndex="10" Enabled="False" />
+  <CheckBox Name="CB1" Location="24, 28" Size="239, 24" Text="roads_attributes_howto.txt" TabIndex="11" Enabled="False" />
+</Dialog>

@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Test Routes</title>
+		<meta name="description" content="dkxce.Routes" />
+		<script type="text/javascript" 	src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src="mapMarkers.js"></script>
+		<script type="text/javascript" src="mapTileOverlay.js"></script>
+		<style type="text/css">
+			html, body, #map { height: 100%; width: 100%; margin: 0; padding: 0; }
+			.labels1 {			
+				color: red;
+				font-family: "Lucida Grande", "Arial", sans-serif;
+				font-size: 9px; font-weight: bold; text-align: left;
+				width: 40px;
+			}
+			.labels2 {			
+				color: lime;
+				font-family: "Lucida Grande", "Arial", sans-serif;
+				font-size: 9px; font-weight: bold; text-align: left;
+				width: 40px;
+			}
+			.labels3 {			
+				color: blue;
+				font-family: "Lucida Grande", "Arial", sans-serif;
+				font-size: 9px; font-weight: bold; text-align: left;
+				width: 40px;
+			}
+		</style>
+		<script type="text/javascript">
+			var cc = 0;
+			var fc;
+			var im = null;
+			var sc;
+			var m1 = null;
+			var m2 = null;
+		
+			var navicomMapTiles = {
+				getTileUrl: function(tile, zoom) { return 'http://maps.navicom.ru:82/nms/getTile.ashx?TEST;'+tile.x+';'+tile.y+';'+zoom; },
+				tileSize: new google.maps.Size(256, 256),
+				isPng: true, maxZoom: 17, minZoom: 4, name: "Navicom" };
+			var garminMapType = new google.maps.ImageMapType(navicomMapTiles); 			
+			
+			// MAPS
+			var osmMapnikTiles = { getTileUrl: function(tile, zoom) {
+					return 'http://tile.openstreetmap.org/' + zoom + "/" + tile.x + "/" + tile.y + ".png";
+				}, tileSize: new google.maps.Size(256, 256), isPng: true, maxZoom: 17, minZoom: 4, name: "Mapnik" };
+			var osmMapnik = new google.maps.ImageMapType(osmMapnikTiles);  
+			
+			var osmOpnvkarte = { getTileUrl: function(tile, zoom) {
+					return 'http://tile.xn--pnvkarte-m4a.de/tilegen/' + zoom + "/" + tile.x + "/" + tile.y + ".png";
+				}, tileSize: new google.maps.Size(256, 256), isPng: true, maxZoom: 17, minZoom: 4, name: "Opnvkarte" };
+			var osmOpnvkarte = new google.maps.ImageMapType(osmOpnvkarte);  
+			
+			var navitelTiles = { getTileUrl: function(a, b) {
+					var xx = a.x.toString();
+					while(xx.length < 8) xx = '0'+xx;
+					var zz = b.toString();
+					while(zz.length < 2) zz = '0'+zz;
+					var yy = Math.round(Math.pow(2,b)-a.y)-1;
+					yy = yy.toString();
+					while(yy.length < 8) yy = '0'+yy;
+					return 'http://maps.navitel.su/navitms.fcgi?t=' + xx + ',' + yy + ',' + zz;
+				}, tileSize: new google.maps.Size(256, 256), isPng: true, maxZoom: 17, minZoom: 4, name: "Navitel" };
+			var navitel = new google.maps.ImageMapType(navitelTiles);  
+			
+			var osmWikiMapTiles = { getTileUrl: function(a, b) {
+					return "http://i" + ((a.x % 4) + (a.y % 4)*4) + ".wikimapia.org/?lng=1&" + 'x=' + a.x + '&y='+a.y+'&zoom='+b;
+				}, tileSize: new google.maps.Size(256, 256), isPng: true, maxZoom: 17, minZoom: 4, name: "WikiMapia" };
+			var osmWikiMap = new google.maps.ImageMapType(osmWikiMapTiles);  
+			
+			var yahooMapTiles = { getTileUrl: function(xy, z) {
+					return 'http://us.maps1.yimg.com/us.tile.maps.yimg.com/tl?v=4.1&md=2&r=1&x='+xy.x+'&y='+(((Math.round(Math.pow(2,z))/2)-1)-xy.y)+'&z='+(z+1);
+				}, tileSize: new google.maps.Size(256, 256), isPng: true, maxZoom: 17, minZoom: 4, name: "Yahoo!" };
+			var yahooMap = new google.maps.ImageMapType(yahooMapTiles);  
+			
+			var rosreestrMapTiles = { getTileUrl: function(xy, z) {
+					return 'http://c.maps.rosreestr.ru/ArcGIS/rest/services/BaseMaps/BaseMapAnno/MapServer/tile/'+z+'/'+xy.y+'/'+xy.x;			
+				}, tileSize: new google.maps.Size(256, 256), isPng: true, maxZoom: 17, minZoom: 4, name: "Rosreestr" };
+			var rosreestrMap = new google.maps.ImageMapType(rosreestrMapTiles);  
+			
+			var rosreestrMap2Tiles = { getTileUrl: function(xy, z) {
+					return 'http://c.maps.rosreestr.ru/ArcGIS/rest/services/BaseMaps/BaseMap/MapServer/tile/'+z+'/'+xy.y+'/'+xy.x;			
+				}, tileSize: new google.maps.Size(256, 256), isPng: true, maxZoom: 17, minZoom: 4, name: "Rosreest2" };
+			var rosreestrMap2 = new google.maps.ImageMapType(rosreestrMap2Tiles);  
+			
+			var msMapTiles = { getTileUrl: function(a, b) {
+					var imageSuffix = '.png';
+					var mapTypeString = "r";
+					var mapTilesVersion = 22;
+					var sTile = '000000';
+					sTile += (parseInt(a.y.toString(2) * 2) + parseInt(a.x.toString(2)));
+					sTile = sTile.substring(sTile.length - b, sTile.length);
+					return 'http://' + mapTypeString + sTile.substring(sTile.length-1, sTile.length) + '.ortho.tiles.virtualearth.net/tiles/' + mapTypeString + sTile + imageSuffix + '?g=' + mapTilesVersion;
+				}, tileSize: new google.maps.Size(256, 256), isPng: true, maxZoom: 17, minZoom: 4, name: "MS Map" };
+			var msMap = new google.maps.ImageMapType(msMapTiles);  
+			// -- MAPS
+			
+			var map = null;
+			var xy = [];
+			var res = null;
+			var path = null;			
+			var infowindow = new google.maps.InfoWindow({ content: 'none' });               
+
+			//setup map
+			function initialize(){				
+				var latlng = new google.maps.LatLng(52.58065, 39.51994);
+				var mapOpts = {
+					zoom: 10,
+					center: latlng,
+					panControl: true,
+					scaleControl: true,
+					mapTypeControlOptions: {
+						mapTypeIds: ['Navicom','Mapnik','Opnvkarte','Navitel','WikiMapia','Yahoo!','Rosreestr','Rosreest2','MS Map',google.maps.MapTypeId.ROADMAP], //add Navicom to map type selection list
+						style: google.maps.MapTypeControlStyle.DROPDOWN_MENU },
+					zoomControl: true,
+					zoomControlOptions: { style: google.maps.ZoomControlStyle.LARGE }
+				};
+				
+				map = new google.maps.Map(document.getElementById("map"), mapOpts);				
+				map.mapTypes.set('Navicom', garminMapType);
+				map.mapTypes.set('Mapnik', osmMapnik);		
+				map.mapTypes.set('Opnvkarte', osmOpnvkarte);		
+				map.mapTypes.set('Navitel', navitel);		
+				map.mapTypes.set('WikiMapia', osmWikiMap);		
+				map.mapTypes.set('Yahoo!', yahooMap);		
+				map.mapTypes.set('Rosreestr', rosreestrMap);		
+				map.mapTypes.set('Rosreest2', rosreestrMap2);		
+				map.mapTypes.set('MS Map', msMap);		
+				map.setMapTypeId('Navicom');				
+				map.setOptions({draggableCursor:'crosshair'});
+								
+				//Create a new Tile Layer. Pass a function that takes tile coordinates and a zoom level and returns the URL for the tile. Optionally pass initialization options.
+				// Labels for RosReestr Map 2
+				var rrOverlay = new missouristate.web.TileOverlay(
+					function(x, y, z) { return 'http://c.maps.rosreestr.ru/ArcGIS/rest/services/BaseMaps/Anno/MapServer/tile/'+z+'/'+y+'/'+x; },
+					{
+					  'map': map, 'minZoom': 1, 'maxZoom': 17,
+					  'mapTypes': ['Rosreest2'], //optional. If present, tiles will only be drawn when the map type matches
+					  'percentOpacity': 100, 'visible': true
+					}
+				);
+								
+				google.maps.event.addListener(map, 'mousemove', function(x) {
+					// window.external.Mouse(x.latLng.lat(),x.latLng.lng());
+				});
+				google.maps.event.addListener(map, 'click', function(x) {
+					cc++;					
+					if(cc == 3) { cc = 1; };
+					if (cc == 1) 
+					{
+						fc = x.latLng;
+						window.external.Start(fc.lat(),fc.lng());
+						if(m1 != null) 
+							m1.setPosition(fc)
+						else
+						{
+							var image = 'mapMarkerS.png';
+							m1 = new google.maps.Marker({position: fc,map: map,icon: image,draggable: true});
+							google.maps.event.addListener(m1, 'dragstart', function(x) { }); 
+							google.maps.event.addListener(m1, 'drag', function(x) { fc = x.latLng; window.external.Start(fc.lat(),fc.lng()); }); 
+							google.maps.event.addListener(m1, 'dragend', function(x) {
+								fc = x.latLng;								
+								window.external.Start(fc.lat(),fc.lng());
+								if(sc === undefined) return;
+								GetRoute();
+							});
+
+						};
+					};
+					if (cc == 2) 
+					{
+						sc = x.latLng;
+						window.external.End(sc.lat(),sc.lng());
+						if(m2 != null) 
+							m2.setPosition(sc)
+						else
+						{
+							var image = 'mapMarkerF.png';
+							m2 = new google.maps.Marker({position: sc,map: map,icon: image, draggable: true});
+							google.maps.event.addListener(m2, 'dragstart', function(x) { }); 
+							google.maps.event.addListener(m2, 'drag', function(x) { sc = x.latLng; window.external.End(sc.lat(),sc.lng()); }); 
+							google.maps.event.addListener(m2, 'dragend', function(x) {
+								sc = x.latLng;
+								window.external.End(sc.lat(),sc.lng());
+								GetRoute();
+							});
+							google.maps.event.addListener(m2 , 'click', function() {
+								infowindow.open(map,m2);
+							});
+						};											
+					};
+					
+					if((m1 != null) && (m2 != null))
+					{
+						GetRoute();
+					};
+				});
+			}
+	
+	function GetRoute()
+	{
+		res = window.external.GetRoute(fc.lat(),fc.lng(),sc.lat(),sc.lng());
+						res = new Function('','return '+res)();
+						
+						// ERROR
+						if(res.LastError.length > 0) { alert(res.LastError); return; };
+						
+						// DESCRIPTION
+						var ctx = '<b>Маршрут:</b><br/>Длина: '+(res.driveLength/1000)+' км<br/>Время: '+res.driveTime+' мин<br/>Старт: '+res.startTime+'<br/>Финиш: '+res.finishTime+'<br/>'+
+							'<br/><b>Описание:</b><div style="font-size:0px;height:1px;background:silver;"></div>';
+						for(var i=0;i<res.instructions.length;i++)
+						{
+							ctx += '<b>['+res.instructions[i].no+']</b> <a href="#" onclick="SM('+i+');return false;">'+res.instructions[i].y+' '+res.instructions[i].x+'</a> '+res.instructions[i].iStreet+'<br/>';
+							if(res.instructions[i].iToDo.length > 0) ctx += res.instructions[i].iToDo+'<br/>';
+							if(res.instructions[i].iToGo.length > 0) ctx += res.instructions[i].iToGo+'<br/>';
+							ctx += '<div style="font-size:0px;height:1px;background:silver;"></div>';
+						};
+						infowindow.setContent(ctx);
+						//infowindow.open(map,m2);
+						//
+						
+						// PATH
+						if(path != null) path.setMap();
+						xy = [];
+						for(var i=0;i<res.polyline.length;i++) xy[i] = new google.maps.LatLng(res.polyline[i].y, res.polyline[i].x);													
+						path = new google.maps.Polyline({path: xy, strokeColor: '#FF00F0', strokeOpacity: 0.85, strokeWeight: 3});
+						path.setMap(map);
+	}
+			
+	function SM(index)
+	{
+		var cco = new google.maps.LatLng(res.instructions[index].y, res.instructions[index].x);
+		if(im != null)
+			im.setPosition(cco)
+		else
+		{
+			var image = 'mapMarkeri.png';
+			im = new google.maps.Marker({position: cco,map: map,icon: image});
+		};
+		//map.setCenter(  );
+		//map.setZoom(16);
+	}				
+	
+	var markers = [];
+	function AddMarker1(lat,lon,id)
+	{
+		var image = 'mapMarker1.png';
+		var m = new MarkerWithLabel({position: new google.maps.LatLng(lat,lon),map: map,icon: image,title: id+'',labelContent: id+'',labelAnchor: new google.maps.Point(20, 0),labelClass: "labels1",labelStyle: {opacity: 1.0}});
+		markers.push(m);
+	}
+	function AddMarker2(lat,lon,id)
+	{
+		var image = 'mapMarker2.png';
+		var m = new MarkerWithLabel({position: new google.maps.LatLng(lat,lon),map: map,icon: image,title: id+'',labelContent: id+'',labelAnchor: new google.maps.Point(20, 0),labelClass: "labels2",labelStyle: {opacity: 1.0}});
+		markers.push(m);
+	}
+	function AddMarker3(lat,lon,id)
+	{
+		var image = 'mapMarker3.png';
+		var m = new MarkerWithLabel({position: new google.maps.LatLng(lat,lon),map: map,icon: image,title: id+'',labelContent: id+'',labelAnchor: new google.maps.Point(20, 0),labelClass: "labels3",labelStyle: {opacity: 1.0}});
+		markers.push(m);
+	}
+	function ClearMarkers()
+	{
+		for(var i=0;i<markers.length;i++) markers[i].setMap(null);
+		markers = [];
+	}
+	
+	</script>	
+	</head>
+	
+	<body onload="initialize()"><div id="map"></div></body>
+</html>

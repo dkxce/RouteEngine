@@ -1,0 +1,20 @@
+System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:7755
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+   at dkxce.Route.ISolver.RouteClient.GetRoute(RStop[] stops, DateTime startTime, Int64 flags, Int32[] RegionsAvailableToUser) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.ISolver\Route.ISolver.cs:line 414
+   at nmsRoutesWebTest.TestProgram.LoopTCP(Object threadID) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\nmsRoutesWebTest\TestProgram.cs:line 185
+System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:7755
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+   at dkxce.Route.ISolver.RouteClient.GetRoute(RStop[] stops, DateTime startTime, Int64 flags, Int32[] RegionsAvailableToUser) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.ISolver\Route.ISolver.cs:line 414
+   at nmsRoutesWebTest.TestProgram.LoopTCP(Object threadID) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\nmsRoutesWebTest\TestProgram.cs:line 185
+System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:7755
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+   at dkxce.Route.ISolver.RouteClient.GetRoute(RStop[] stops, DateTime startTime, Int64 flags, Int32[] RegionsAvailableToUser) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.ISolver\Route.ISolver.cs:line 414
+   at nmsRoutesWebTest.TestProgram.LoopTCP(Object threadID) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\nmsRoutesWebTest\TestProgram.cs:line 185
+System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:7755
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+   at dkxce.Route.ISolver.RouteClient.GetRoute(RStop[] stops, DateTime startTime, Int64 flags, Int32[] RegionsAvailableToUser) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.ISolver\Route.ISolver.cs:line 414
+   at nmsRoutesWebTest.TestProgram.LoopTCP(Object threadID) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\nmsRoutesWebTest\TestProgram.cs:line 185
+System.Net.Sockets.SocketException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение 127.0.0.1:7755
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+   at dkxce.Route.ISolver.RouteClient.GetRoute(RStop[] stops, DateTime startTime, Int64 flags, Int32[] RegionsAvailableToUser) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\dkxce.Route.ISolver\Route.ISolver.cs:line 414
+   at nmsRoutesWebTest.TestProgram.LoopTCP(Object threadID) in M:\NAVICOM_PROJECTS\_ROUTES_PSOURCE_\SOLVER\nmsRoutesWebTest\TestProgram.cs:line 185

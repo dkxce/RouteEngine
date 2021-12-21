@@ -1,0 +1,17 @@
+﻿<html>
+	<title>dkxce Route ServiceSolver</title>
+	<body>
+		<div style="color:navy;font-size:32px;width:400px;text-align:center;"><b>dkxce Route ServiceSolver</b></div>
+		<div style="font-size:24px;width:400px;text-align:center;">сервис онлайн маршрутов</div>
+		<div style="font-size:14px;width:400px;text-align:center;">Copyrights &copy; milokz@gmail.com</div>		
+		<br/>
+		<div style="width:400px;text-align:center;">
+			<a href="/nms/status"><b>Service status</b></a>  |  
+			<a href="/nms/help"><b>Documentation</b></a>		
+		</div>
+	</body>
+	<script>
+		// window.location.href = "/nms/status";
+		// window.location.replace("/nms/status");
+	</script>
+</html>
