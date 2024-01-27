@@ -1,6 +1,4 @@
-// Lock Exe with Machine ID -- use SSKeySys & SSProtector in Tools
 #define LOCK
-// Allow Empty Lock (No Machin ID in Exe) -- use SSKeySys & SSProtector in Tools
 #define AllowEmptyLock
 
 using System;
@@ -31,7 +29,7 @@ namespace dkxce.Route.ServiceSolver
     {        
         static void Main(string[] args)
         {
-            bool isVirt = SYSID._IsVirtual; // false
+            bool isVirt = false;// SYSID._IsVirtual;
 
             string MachineID = "";
 
@@ -40,7 +38,7 @@ namespace dkxce.Route.ServiceSolver
             {
                 Console.WriteLine(MachineID);
                 Console.WriteLine("Machine is not supported (1)");
-                System.Threading.Thread.Sleep(2500);
+                System.Threading.Thread.Sleep(1000);
                 return;
             };
             #endif
@@ -49,42 +47,28 @@ namespace dkxce.Route.ServiceSolver
             {
                 Console.WriteLine(MachineID);
                 Console.WriteLine("Machine is not supported (2)");
-                System.Threading.Thread.Sleep(2500);
+                System.Threading.Thread.Sleep(1000);
                 return;
             };
             
             if (isVirt || RunConsole(args, "dkxce.Route.ServiceSolver"))
             {
-                Console.Write("Starting Service...");
-                Console.SetCursorPosition(0, Console.CursorTop);
-
                 RouteServer rs = new RouteServer();
                 try
-                {                                        
+                {
                     rs.Start(args);
-                    Console.WriteLine(rs.StartupInfo.Replace("\r\nReady",""));
-
-                    //#if LOCK
-                    //Console.WriteLine("Machine ID: " + MachineID);
-                    //Console.WriteLine("Is Virtual: " + isVirt.ToString());
-                    //#endif
-                    
                     if (isVirt)
                     {
-                        Console.WriteLine("Started at console (5 days)");
+                        Console.WriteLine("RouteEngine: started at console (5 days)");
                         Conso1e.ReadLine(1000 * 60 * 60 * 24 * 5); // 5 days runtime limit
                     }
                     else
                     {
-                        Console.WriteLine("Started at console");
+                        Console.WriteLine("RouteEngine: started at console");
                         Console.ReadLine();
                     };
-                } 
-                catch (Exception ex) 
-                {
-                    Console.WriteLine("Error: "+ex.Message);
-                    Conso1e.ReadLine(5000);
-                };
+                }
+                catch (Exception ex) { Console.WriteLine("RouteEngine: Launch Error: " + ex.Message); };
                 try { rs.Stop(); } catch { };
                 Console.WriteLine("RouteEngine: stopped");
                 return;
@@ -96,7 +80,7 @@ namespace dkxce.Route.ServiceSolver
             if (!Environment.UserInteractive) // As Service
             {
                 ServiceBase[] ServicesToRun;
-                ServicesToRun = new ServiceBase[] { new RouteServer() };                
+                ServicesToRun = new ServiceBase[] { new RouteServer() };
                 ServiceBase.Run(ServicesToRun);
                 return false;
             };
@@ -170,7 +154,6 @@ namespace dkxce.Route.ServiceSolver
                         return false;
                     };
                 default:
-                    try { if (File.Exists(args[0])) return true; } catch { };
                     Console.WriteLine("Usage:");
                     Console.WriteLine("  dkxce.Route.ServiceSolver.exe    - running console");
                     Console.WriteLine("  dkxce.Route.ServiceSolver.exe /i   - install service");
@@ -200,7 +183,7 @@ namespace dkxce.Route.ServiceSolver
                 for (int i = 0; i < MACHINEID.Length; i++) if (MACHINEID[i] == 0) { x = i; break; };
                 #if AllowEmptyLock
                 for (int i = 30; i < MACHINEID.Length; i++) sum += MACHINEID[i];
-                if (sum == 120) return true; // 0x3C, 0x3C
+                if (sum == 120) return true;
                 #endif
                 HASH3 = System.Text.Encoding.ASCII.GetString(MACHINEID, 30, x - 30);
                 //return true;
